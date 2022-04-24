@@ -37,7 +37,7 @@ public class UserDataImpl implements UserDataDao {
     }
 
     @Override
-    public Object searchUser(String msg) {
+    public Object searchUser(Object msg) {
         return null;
     }
 

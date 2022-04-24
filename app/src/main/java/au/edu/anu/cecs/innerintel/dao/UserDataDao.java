@@ -16,6 +16,6 @@ public interface UserDataDao<T> {
     boolean updateProfile(T user);
 
     // Search a user by id, name or role
-    T searchUser(String msg);
+    T searchUser(T msg);
 
 }

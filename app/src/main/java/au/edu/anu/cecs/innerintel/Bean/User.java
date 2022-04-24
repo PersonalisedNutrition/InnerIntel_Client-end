@@ -1,17 +1,23 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
+import au.edu.anu.cecs.innerintel.Bean.enumType.UserRole;
+
+/**
+ * The entity class of user
+ * @author XinyueHu
+ */
 public class User {
     private String uid;
     private String psd;
     private String name;
     private String sex;
     private String email;
-    private String role;
+    private UserRole role;
     private String img;
     private String securityQuestions;
 
     public User(String uid, String name,
-                String sex, String email, String role, String img) {
+                String sex, String email, UserRole role, String img) {
         this.uid = uid;
         this.name = name;
         this.sex = sex;
@@ -60,11 +66,11 @@ public class User {
         this.email = email;
     }
 
-    public String getRole() {
+    public UserRole getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(UserRole role) {
         this.role = role;
     }
 
@@ -83,7 +89,7 @@ public class User {
     public void setSecurityQuestions(String securityQuestions) {
         this.securityQuestions = securityQuestions;
     }
-
+    //TODO User implementation methods need to be complete later.
     public void signUp() {}
     public void login() {}
     public void setPersonalInfo() {}

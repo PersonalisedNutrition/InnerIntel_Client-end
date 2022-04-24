@@ -1,13 +1,19 @@
 package au.edu.anu.cecs.innerintel.Bean;
-
+/**
+ * The entity class of nutritionist
+ * @author XinyueHu
+ */
 import java.util.LinkedList;
 import java.util.List;
+
+import au.edu.anu.cecs.innerintel.Bean.enumType.UserRole;
 
 public class Nutritionist extends User {
     private String intro;
     private List<Client> conClients;
     private LinkedList<String> reports;  //TODO here String must be replaced by Log.class
-    public Nutritionist(String uid, String name, String sex, String email, String role, String img) {
+
+    public Nutritionist(String uid, String name, String sex, String email, UserRole role, String img) {
         super(uid, name, sex, email, role, img);
     }
 

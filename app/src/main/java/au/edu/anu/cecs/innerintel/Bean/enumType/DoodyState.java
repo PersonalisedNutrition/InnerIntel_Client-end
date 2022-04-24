@@ -4,8 +4,8 @@ package au.edu.anu.cecs.innerintel.Bean.enumType;
  * @author Shiyun Zhu
  */
 public enum DoodyState {
-    HardSolid,
-    SoftSolid,
-    ThickLiquid,
-    DiluteLiquid;
+    HARDSOLID,
+    SOFTSOLID,
+    THICKLIQUID,
+    DILUTELIQUID;
 }

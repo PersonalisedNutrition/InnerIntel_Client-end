@@ -5,8 +5,8 @@ package au.edu.anu.cecs.innerintel.Bean.enumType;
  * @author Shiyun Zhu
  */
 public enum DoodyColor {
-    Brown,
-    Green,
+    BROWN,
+    GREEN,
     RED,
     BLACK;
 }

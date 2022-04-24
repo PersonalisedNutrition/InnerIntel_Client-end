@@ -1,5 +1,6 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
+
 import au.edu.anu.cecs.innerintel.Bean.enumType.UserRole;
 
 /**
@@ -7,7 +8,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.UserRole;
  * @author XinyueHu
  */
 public class User {
-    private String uid;
+    private final String uid; // one user has only one uid.
     private String psd;
     private String name;
     private String sex;
@@ -15,6 +16,10 @@ public class User {
     private UserRole role;
     private String img;
     private String securityQuestions;
+
+    public User(String uid) {
+        this.uid = uid;
+    }
 
     public User(String uid, String name,
                 String sex, String email, UserRole role, String img) {
@@ -28,10 +33,6 @@ public class User {
 
     public String getUid() {
         return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
     }
 
     public String getName() {

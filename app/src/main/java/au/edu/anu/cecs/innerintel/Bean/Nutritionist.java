@@ -4,17 +4,24 @@ package au.edu.anu.cecs.innerintel.Bean;
  * @author XinyueHu
  */
 import java.util.LinkedList;
-import java.util.List;
 
-import au.edu.anu.cecs.innerintel.Bean.enumType.UserRole;
 
 public class Nutritionist extends User {
     private String intro;
-    private List<Client> conClients;
-    private LinkedList<String> reports;  //TODO here String must be replaced by Log.class
+    private LinkedList<Client> conClients;
+    private LinkedList<Log> reports;
 
-    public Nutritionist(String uid, String name, String sex, String email, UserRole role, String img) {
-        super(uid, name, sex, email, role, img);
+    public Nutritionist(String uid, String intro, LinkedList<Client> conClients,
+                        LinkedList<Log> reports) {
+        super(uid);
+        this.intro = intro;
+        this.conClients = conClients;
+        this.reports = reports;
+    }
+
+    public Nutritionist(String uid, String intro) {
+        super(uid);
+        this.intro = intro;
     }
 
     public String getIntro() {
@@ -25,27 +32,27 @@ public class Nutritionist extends User {
         this.intro = intro;
     }
 
-    public List<Client> getConClients() {
+    public LinkedList<Client> getConClients() {
         return conClients;
     }
 
-    public void setConClients(List<Client> conClients) {
+    public void setConClients(LinkedList<Client> conClients) {
         this.conClients = conClients;
     }
 
-    public LinkedList<String> getReports() {
+    public LinkedList<Log> getReports() {
         return reports;
     }
 
-    public void setReports(LinkedList<String> reports) {
+    public void setReports(LinkedList<Log> reports) {
         this.reports = reports;
     }
 
-    // TODO void must be replaced by Log.class
-    public void readReport(){}
+    //TODO Nutritionist method needs to be modified.
+    public Log readReport(){return null;}
     public void chatWithClient(){}
     public String sendAdvices() {return null;}
-    public int countClients(List<Client> li){
+    public int countClients(LinkedList<Client> li){
         return li.size();
     }
     public void countReports(){}

@@ -3,15 +3,17 @@ package au.edu.anu.cecs.innerintel.dao.dataImpl;
 import java.util.Set;
 
 import au.edu.anu.cecs.innerintel.Bean.DoodyLog;
+import au.edu.anu.cecs.innerintel.Bean.Log;
 import au.edu.anu.cecs.innerintel.Bean.enumType.DoodyColor;
 import au.edu.anu.cecs.innerintel.Bean.enumType.DoodyState;
-import au.edu.anu.cecs.innerintel.dao.DoodyLogDao;
+import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 
 /**
  * four main method: add / lookup(search) / update(edit) / delete
+ * @author Tianqi Tang
  */
-public class DoodyLogDaoImpl implements DoodyLogDao {
+public class DoodyLogDaoImpl implements LogDao<DoodyLog> {
 
     //Implement singleton design pattern
     private static DoodyLogDaoImpl doodyLogDao = null;
@@ -24,57 +26,22 @@ public class DoodyLogDaoImpl implements DoodyLogDao {
     }
 
     @Override
-    public boolean inputDoody(DoodyLog doodyLog) {
+    public boolean inputLog(DoodyLog log) {
         return false;
     }
 
     @Override
-    public Set<DoodyLog> lookUpDoodyLogByDoodyState(DoodyState doodyState) {
+    public Set<Log> lookUpLog(String logContent, String searchType) {
         return null;
     }
 
     @Override
-    public Set<DoodyLog> lookUpDoodyLogByDoodyColor(DoodyColor doodyColor) {
-        return null;
-    }
-
-    @Override
-    public DoodyLog lookUpDoodyLogById(int logId) {
-        return null;
-    }
-
-    @Override
-    public boolean editDoodyDuration(int logId, String doodyDuration) {
+    public boolean editLog(DoodyLog log) {
         return false;
     }
 
     @Override
-    public boolean editDoodySmell(int logId, String doodySmell) {
-        return false;
-    }
-
-    @Override
-    public boolean editDoodyVolume(int logId, String doodyVolume) {
-        return false;
-    }
-
-    @Override
-    public boolean editDoodyFeeling(int logId, String doodyFeeling) {
-        return false;
-    }
-
-    @Override
-    public boolean editDoodyState(int logId, DoodyState doodyState) {
-        return false;
-    }
-
-    @Override
-    public boolean editDoodyColor(int logId, DoodyColor doodyColor) {
-        return false;
-    }
-
-    @Override
-    public boolean deleteDoodyLogById(int logId) {
+    public boolean deleteLogById(int logId) {
         return false;
     }
 }

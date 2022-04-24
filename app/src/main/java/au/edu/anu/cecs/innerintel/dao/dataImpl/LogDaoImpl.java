@@ -8,8 +8,9 @@ import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 /**
  * four main method: add / lookup(search) / update(edit) / delete
+ * @author Tianqi Tang
  */
-public class LogDaoImpl implements LogDao {
+public class LogDaoImpl implements LogDao<LogDao> {
 
     //Implement singleton design pattern
     private static LogDaoImpl logDao = null;
@@ -22,42 +23,17 @@ public class LogDaoImpl implements LogDao {
     }
 
     @Override
-    public boolean inputLog(Log log) {
+    public boolean inputLog(LogDao log) {
         return false;
     }
 
     @Override
-    public Set<Log> lookUpLogByType(String logType) {
+    public Set<Log> lookUpLog(String logContent, String searchType) {
         return null;
     }
 
     @Override
-    public Set<Log> lookUpLogByTime(String logTime) {
-        return null;
-    }
-
-    @Override
-    public Set<Log> lookUpLogByAuthority(int logAuthority) {
-        return null;
-    }
-
-    @Override
-    public Log lookUpLogById(int logId) {
-        return null;
-    }
-
-    @Override
-    public boolean editLogType(int logId, String logType) {
-        return false;
-    }
-
-    @Override
-    public boolean editLogTime(int logId, String logTime) {
-        return false;
-    }
-
-    @Override
-    public boolean editLogAuthority(int logId, int logAuthority) {
+    public boolean editLog(LogDao log) {
         return false;
     }
 

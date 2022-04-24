@@ -4,6 +4,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.FeelingType;
 
 /**
  * when create a Feeling log, also should create a log
+ * @author Tianqi Tang
  */
 public class FeelingLog {
     private final int logId; // can never edit, once create || this will relate with log by logId

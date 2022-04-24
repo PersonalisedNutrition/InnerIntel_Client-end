@@ -5,6 +5,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.LogType;
 /**
  * two constructors : difference(contains logtime and logauthority or without them)
  * logId cannot be edit once create
+ * @author Tianqi Tang
  */
 public class Log {
     private final int logId; // can never edit, once create

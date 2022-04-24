@@ -4,6 +4,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.MealType;
 
 /**
  * when create a meal log, also should create a log
+ * @author Tianqi Tang
  */
 public class MealLog {
     private final int logId; // can never edit, once create || this will relate with log by logId

@@ -5,6 +5,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.DoodyState;
 
 /**
  * when create a doody log, also should create a log
+ * @author Tianqi Tang
  */
 public class DoodyLog {
     private final int logId; // can never edit, once create || this will relate with log by logId

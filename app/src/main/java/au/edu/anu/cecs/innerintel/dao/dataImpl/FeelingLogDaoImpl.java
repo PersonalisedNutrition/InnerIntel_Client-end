@@ -3,14 +3,16 @@ package au.edu.anu.cecs.innerintel.dao.dataImpl;
 import java.util.Set;
 
 import au.edu.anu.cecs.innerintel.Bean.FeelingLog;
+import au.edu.anu.cecs.innerintel.Bean.Log;
 import au.edu.anu.cecs.innerintel.Bean.enumType.FeelingType;
-import au.edu.anu.cecs.innerintel.dao.FeelingLogDao;
+import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 
 /**
  * four main method: add / lookup(search) / update(edit) / delete
+ * @author Tianqi Tang
  */
-public class FeelingLogDaoImpl implements FeelingLogDao {
+public class FeelingLogDaoImpl implements LogDao<FeelingLog> {
 
     //Implement singleton design pattern
     private static FeelingLogDaoImpl feelingLogDao = null;
@@ -23,32 +25,22 @@ public class FeelingLogDaoImpl implements FeelingLogDao {
     }
 
     @Override
-    public boolean inputFeeling(FeelingLog feelingLog) {
+    public boolean inputLog(FeelingLog log) {
         return false;
     }
 
     @Override
-    public Set<FeelingLog> lookUpFeelingLogByType(FeelingType feelingType) {
+    public Set<Log> lookUpLog(String logContent, String searchType) {
         return null;
     }
 
     @Override
-    public FeelingLog lookUpFeelingLogById(int logId) {
-        return null;
-    }
-
-    @Override
-    public boolean editFeelingType(int logId, FeelingType feelingType) {
+    public boolean editLog(FeelingLog log) {
         return false;
     }
 
     @Override
-    public boolean editFeelingDescription(int logId, String feelingDescription) {
-        return false;
-    }
-
-    @Override
-    public boolean deleteFeelingLogById(int logId) {
+    public boolean deleteLogById(int logId) {
         return false;
     }
 }

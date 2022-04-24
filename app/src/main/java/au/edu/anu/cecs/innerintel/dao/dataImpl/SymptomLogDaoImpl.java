@@ -2,13 +2,15 @@ package au.edu.anu.cecs.innerintel.dao.dataImpl;
 
 import java.util.Set;
 
+import au.edu.anu.cecs.innerintel.Bean.Log;
 import au.edu.anu.cecs.innerintel.Bean.SymptomLog;
-import au.edu.anu.cecs.innerintel.dao.SymptomLogDao;
+import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 /**
  * four main method: add / lookup(search) / update(edit) / delete
+ * @author Tianqi Tang
  */
-public class SymptomLogDaoImpl implements SymptomLogDao {
+public class SymptomLogDaoImpl implements LogDao<SymptomLog> {
 
     //Implement singleton design pattern
     private static SymptomLogDaoImpl symptomLogDao = null;
@@ -21,42 +23,22 @@ public class SymptomLogDaoImpl implements SymptomLogDao {
     }
 
     @Override
-    public boolean inputSymptom(SymptomLog symptomLog) {
+    public boolean inputLog(SymptomLog log) {
         return false;
     }
 
     @Override
-    public Set<SymptomLog> lookUpSymptomLogByType(String symptomLogType) {
+    public Set<Log> lookUpLog(String logContent, String searchType) {
         return null;
     }
 
     @Override
-    public Set<SymptomLog> lookUpSymptomLogByDuration(String symptomLogDuration) {
-        return null;
-    }
-
-    @Override
-    public SymptomLog lookUpSymptomLogById(int logId) {
-        return null;
-    }
-
-    @Override
-    public boolean editSymptomType(int logId, String symptomType) {
+    public boolean editLog(SymptomLog log) {
         return false;
     }
 
     @Override
-    public boolean editSymptomDuration(int logId, String symptomDuration) {
-        return false;
-    }
-
-    @Override
-    public boolean editSymptomDescription(int logId, String symptomDescription) {
-        return false;
-    }
-
-    @Override
-    public boolean deleteSymptomLogById(int logId) {
+    public boolean deleteLogById(int logId) {
         return false;
     }
 }

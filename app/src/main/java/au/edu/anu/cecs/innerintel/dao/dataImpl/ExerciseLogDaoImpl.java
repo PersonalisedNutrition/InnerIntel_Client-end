@@ -2,14 +2,17 @@ package au.edu.anu.cecs.innerintel.dao.dataImpl;
 
 import java.util.Set;
 
+import au.edu.anu.cecs.innerintel.Bean.ExerciseLog;
+import au.edu.anu.cecs.innerintel.Bean.Log;
 import au.edu.anu.cecs.innerintel.Bean.enumType.ExerciseType;
-import au.edu.anu.cecs.innerintel.dao.ExerciseLogDao;
+import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 
 /**
  * four main method: add / lookup(search) / update(edit) / delete
+ * @author Tianqi Tang
  */
-public class ExerciseLogDaoImpl implements ExerciseLogDao {
+public class ExerciseLogDaoImpl implements LogDao<ExerciseLog> {
 
     //Implement singleton design pattern
     private static ExerciseLogDaoImpl exerciseLogDao = null;
@@ -22,32 +25,22 @@ public class ExerciseLogDaoImpl implements ExerciseLogDao {
     }
 
     @Override
-    public boolean inputExercise(ExerciseType exerciseType) {
+    public boolean inputLog(ExerciseLog log) {
         return false;
     }
 
     @Override
-    public Set<ExerciseType> lookUpExerciseLogByType(ExerciseType exerciseType) {
+    public Set<Log> lookUpLog(String logContent, String searchType) {
         return null;
     }
 
     @Override
-    public ExerciseType lookUpExerciseLogById(int logId) {
-        return null;
-    }
-
-    @Override
-    public boolean editExerciseType(int logId, ExerciseType exerciseType) {
+    public boolean editLog(ExerciseLog log) {
         return false;
     }
 
     @Override
-    public boolean editExerciseDescription(int logId, String exerciseDescription) {
-        return false;
-    }
-
-    @Override
-    public boolean deleteExerciseLogById(int logId) {
+    public boolean deleteLogById(int logId) {
         return false;
     }
 }

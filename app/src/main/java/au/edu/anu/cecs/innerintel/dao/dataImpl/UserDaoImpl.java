@@ -3,41 +3,42 @@ package au.edu.anu.cecs.innerintel.dao.dataImpl;
 
 import java.lang.reflect.Type;
 
+import au.edu.anu.cecs.innerintel.Bean.User;
 import au.edu.anu.cecs.innerintel.dao.UserDataDao;
 
 /**
  * Database operations of all types of users.
  * @author XinyueHu
  */
-public class UserDataImpl implements UserDataDao {
+public class UserDaoImpl implements UserDataDao<User> {
 
     //Implement singleton design pattern
-    private static UserDataImpl userDao = null;
+    private static UserDaoImpl userDao = null;
 
-    public static UserDataImpl getInstance() {
+    public static UserDaoImpl getInstance() {
         if (userDao == null) {
-            userDao = new UserDataImpl();
+            userDao = new UserDaoImpl();
         }
         return userDao;
     }
 
     @Override
-    public boolean addUser(Object user) {
+    public boolean addUser(User user) {
         return false;
     }
 
     @Override
-    public boolean deleteUser(Object user) {
+    public boolean deleteUser(User user) {
         return false;
     }
 
     @Override
-    public boolean updateProfile(Object user) {
+    public boolean updateProfile(User user) {
         return false;
     }
 
     @Override
-    public Object searchUser(Object msg) {
+    public User searchUser(String msg) {
         return null;
     }
 

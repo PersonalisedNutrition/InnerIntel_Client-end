@@ -1,7 +1,9 @@
 package au.edu.anu.cecs.innerintel.dao.dataImpl;
 
+
 import au.edu.anu.cecs.innerintel.Bean.Client;
 import au.edu.anu.cecs.innerintel.dao.UserDataDao;
+
 /**
  * Database operations of clients.
  * @author XinyueHu
@@ -21,6 +23,9 @@ public class ClientDaoImpl implements UserDataDao<Client> {
     public String readLog(Client user) {return null;}
     public String changeLog(Client user) {return null;}
     public boolean deleteLog(Client user) {return false;}
+
+    public String showDiseaseHistory(Client user){return null;}
+    public String showAllergies(Client user){return null;}
 
     @Override
     public boolean addUser(Client user) {

@@ -4,5 +4,5 @@ package au.edu.anu.cecs.innerintel.Bean.enumType;
  * @author XinyueHu
  */
 public enum BloodType {
-    A,B,AB,O,RH
+    A,B,AB,O
 }

@@ -1,7 +1,10 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
 
+
 import au.edu.anu.cecs.innerintel.Bean.enumType.BloodType;
+
+import java.util.LinkedList;
 
 /**
  * The entity class of client
@@ -12,17 +15,9 @@ public class Client extends User {
     private int weight;
     private int age;
     private BloodType bloodType;
-    private String logInfo;
-
-    public Client(String uid,int height,int weight,int age,
-                  BloodType bloodType, String loginfo) {
-        super(uid);
-        this.height = height;
-        this.weight = weight;
-        this.age = age;
-        this.bloodType = bloodType;
-        this.logInfo = loginfo;
-    }
+    private Allergies allergies;
+    private LinkedList<Disease> DiseaseHistory;
+    private LinkedList<Log> logs;
 
     public Client(String uid,int height,int weight,int age,
                   BloodType bloodType) {
@@ -31,6 +26,30 @@ public class Client extends User {
         this.weight = weight;
         this.age = age;
         this.bloodType = bloodType;
+    }
+
+    public Allergies getAllergies() {
+        return allergies;
+    }
+
+    public void setAllergies(Allergies allergies) {
+        this.allergies = allergies;
+    }
+
+    public LinkedList<Disease> getDiseaseHistory() {
+        return DiseaseHistory;
+    }
+
+    public void setDiseaseHistory(LinkedList<Disease> diseaseHistory) {
+        DiseaseHistory = diseaseHistory;
+    }
+
+    public LinkedList<Log> getLogs() {
+        return logs;
+    }
+
+    public void setLogs(LinkedList<Log> logs) {
+        this.logs = logs;
     }
 
     public int getHeight() {
@@ -65,20 +84,11 @@ public class Client extends User {
         this.bloodType = bloodType;
     }
 
-    public String getLogInfo() {
-        return logInfo;
-    }
 
-    public void setLogInfo(String logInfo) {
-        this.logInfo = logInfo;
-    }
 
     //TODO Client implementation methods need to be complete later.
     public void recordBodyInfo(){}
     public void recordDailyInput() {}
-    public String readLog() { return null;}
-    public String changeLog() {return null;}
-    public String deleteLog() {return null;}
     public String getAdvice() {return null;}
     public String readNutritionistInfo() {return null;}
     public int addNutritionist() {return 0;}

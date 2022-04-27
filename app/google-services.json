@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1070596195661",
+    "project_id": "innerintel-4e391",
+    "storage_bucket": "innerintel-4e391.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070596195661:android:70d90a4ae15bac146da304",
+        "android_client_info": {
+          "package_name": "au.edu.anu.cecs.innerintel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070596195661-00so9jjlkfulnf4sr7a70315jau9u535.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDllEnivL8LPISIN82dToeg7S42rpEQKm8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070596195661-00so9jjlkfulnf4sr7a70315jau9u535.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

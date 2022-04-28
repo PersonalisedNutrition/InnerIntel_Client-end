@@ -4,7 +4,7 @@ package au.edu.anu.cecs.innerintel.dao;
  * Basic database operations of all users.
  * @author XinyueHu
  */
-public interface UserDataDao<T> {
+public interface UserDao<T> {
 
     // Add a user
     boolean addUser(T user);

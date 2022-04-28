@@ -6,7 +6,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.FoodType;
  * The entity class of food data.
  * @author Shiyun Zhu
  */
-public class FoodData {
+public class Food {
     FoodType foodType;
     String foodName;
     String foodPictureURL;
@@ -15,7 +15,7 @@ public class FoodData {
 
 
     //Different constructor to instantiate.
-    public FoodData(FoodType foodType, String foodName, String foodPictureURL, String foodInfo, int foodMeasurement) {
+    public Food(FoodType foodType, String foodName, String foodPictureURL, String foodInfo, int foodMeasurement) {
         this.foodType = foodType;
         this.foodName = foodName;
         this.foodPictureURL = foodPictureURL;
@@ -23,7 +23,7 @@ public class FoodData {
         this.foodMeasurement = foodMeasurement;
     }
 
-    public FoodData(FoodType foodType, String foodName, int foodMeasurement) {
+    public Food(FoodType foodType, String foodName, int foodMeasurement) {
         this.foodType = foodType;
         this.foodName = foodName;
         this.foodMeasurement = foodMeasurement;

@@ -5,25 +5,25 @@ package au.edu.anu.cecs.innerintel.Bean;
  */
 public class Allergies {
     private final int aid;
-    private int uid;
+    private int cid;
     private String allergicFood;
     private String allergicDrug;
 
-    public Allergies(int aid, int uid) {
+    public Allergies(int aid, int cid) {
         this.aid = aid;
-        this.uid = uid;
+        this.cid = cid;
     }
 
     public int getAid() {
         return aid;
     }
 
-    public int getUid() {
-        return uid;
+    public int getCid() {
+        return cid;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public void setUid(int cid) {
+        this.cid = cid;
     }
 
     public String getAllergicFood() {

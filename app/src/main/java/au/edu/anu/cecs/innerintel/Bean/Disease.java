@@ -7,21 +7,21 @@ import java.io.Serializable;
  */
 public class Disease implements Serializable {
      private final int did; // once created never change.
-     private int uid;
+     private int cid;
      private String StartTime;
      private String EndTime;
      private String type;
      private String medicine;
 
-    public Disease(int did, int uid) {
+    public Disease(int did, int cid) {
         this.did = did;
-        this.uid = uid;
+        this.cid = cid;
     }
 
-    public Disease(int did, int uid, String startTime,
+    public Disease(int did, int cid, String startTime,
                    String endTime, String type, String medicine) {
         this.did = did;
-        this.uid = uid;
+        this.cid = cid;
         StartTime = startTime;
         EndTime = endTime;
         this.type = type;
@@ -32,12 +32,12 @@ public class Disease implements Serializable {
         return did;
     }
 
-    public int getUid() {
-        return uid;
+    public int getCid() {
+        return cid;
     }
 
-    public void setUid(int uid) {
-        this.uid = uid;
+    public void setCid(int cid) {
+        this.cid = cid;
     }
 
     public String getStartTime() {

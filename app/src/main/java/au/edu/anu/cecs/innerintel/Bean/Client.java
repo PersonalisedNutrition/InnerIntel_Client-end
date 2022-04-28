@@ -2,15 +2,16 @@ package au.edu.anu.cecs.innerintel.Bean;
 
 
 
-import au.edu.anu.cecs.innerintel.Bean.enumType.BloodType;
-
 import java.util.LinkedList;
+
+import au.edu.anu.cecs.innerintel.Bean.enumType.BloodType;
 
 /**
  * The entity class of client
  * @author XinyueHu
  */
 public class Client extends User {
+    private final int cid;
     private int height;
     private int weight;
     private int age;
@@ -19,13 +20,18 @@ public class Client extends User {
     private LinkedList<Disease> DiseaseHistory;
     private LinkedList<Log> logs;
 
-    public Client(String uid,int height,int weight,int age,
+    public Client(String uid, int cid, int height, int weight, int age,
                   BloodType bloodType) {
         super(uid);
+        this.cid = cid;
         this.height = height;
         this.weight = weight;
         this.age = age;
         this.bloodType = bloodType;
+    }
+
+    public int getCid() {
+        return cid;
     }
 
     public Allergies getAllergies() {

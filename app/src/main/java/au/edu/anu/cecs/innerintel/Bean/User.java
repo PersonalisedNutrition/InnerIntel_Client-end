@@ -12,20 +12,25 @@ public class User {
     private String psd;
     private String name;
     private String sex;
+    private String country;
+    private String postalCode;
+    private String phone;
     private String email;
     private UserRole role;
     private String img;
-    private String securityQuestions;
 
     public User(String uid) {
         this.uid = uid;
     }
 
     public User(String uid, String name,
-                String sex, String email, UserRole role, String img) {
+                String sex, String country, String postalCode, String phone, String email, UserRole role, String img) {
         this.uid = uid;
         this.name = name;
         this.sex = sex;
+        this.country = country;
+        this.postalCode = postalCode;
+        this.phone = phone;
         this.email = email;
         this.role = role;
         this.img = img;
@@ -49,6 +54,30 @@ public class User {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getPsd() {
@@ -83,13 +112,7 @@ public class User {
         this.img = img;
     }
 
-    public String getSecurityQuestions() {
-        return securityQuestions;
-    }
 
-    public void setSecurityQuestions(String securityQuestions) {
-        this.securityQuestions = securityQuestions;
-    }
     //TODO User implementation methods need to be complete later.
     public void signUp() {}
     public void login() {}

@@ -1,29 +1,29 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 import java.util.Set;
 
 import au.edu.anu.cecs.innerintel.Bean.Log;
-import au.edu.anu.cecs.innerintel.Bean.SymptomLog;
 import au.edu.anu.cecs.innerintel.dao.LogDao;
+
 
 /**
  * four main method: add / lookup(search) / update(edit) / delete
  * @author Tianqi Tang
  */
-public class SymptomLogDaoImpl implements LogDao<SymptomLog> {
+public class LogDaoImpl implements LogDao<LogDao> {
 
     //Implement singleton design pattern
-    private static SymptomLogDaoImpl symptomLogDao = null;
+    private static LogDaoImpl logDao = null;
 
-    public static SymptomLogDaoImpl getInstance() {
-        if (symptomLogDao == null) {
-            symptomLogDao = new SymptomLogDaoImpl();
+    public static LogDaoImpl getInstance() {
+        if (logDao == null) {
+            logDao = new LogDaoImpl();
         }
-        return symptomLogDao;
+        return logDao;
     }
 
     @Override
-    public boolean inputLog(SymptomLog log) {
+    public boolean inputLog(LogDao log) {
         return false;
     }
 
@@ -33,7 +33,7 @@ public class SymptomLogDaoImpl implements LogDao<SymptomLog> {
     }
 
     @Override
-    public boolean editLog(SymptomLog log) {
+    public boolean editLog(LogDao log) {
         return false;
     }
 

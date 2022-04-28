@@ -1,8 +1,9 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 import java.util.Set;
 
 import au.edu.anu.cecs.innerintel.Bean.Log;
+import au.edu.anu.cecs.innerintel.Bean.MealLog;
 import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 
@@ -10,20 +11,20 @@ import au.edu.anu.cecs.innerintel.dao.LogDao;
  * four main method: add / lookup(search) / update(edit) / delete
  * @author Tianqi Tang
  */
-public class LogDaoImpl implements LogDao<LogDao> {
+public class MealLogDaoImpl implements LogDao<MealLog> {
 
     //Implement singleton design pattern
-    private static LogDaoImpl logDao = null;
+    private static MealLogDaoImpl mealLogDao = null;
 
-    public static LogDaoImpl getInstance() {
-        if (logDao == null) {
-            logDao = new LogDaoImpl();
+    public static MealLogDaoImpl getInstance() {
+        if (mealLogDao == null) {
+            mealLogDao = new MealLogDaoImpl();
         }
-        return logDao;
+        return mealLogDao;
     }
 
     @Override
-    public boolean inputLog(LogDao log) {
+    public boolean inputLog(MealLog log) {
         return false;
     }
 
@@ -33,7 +34,7 @@ public class LogDaoImpl implements LogDao<LogDao> {
     }
 
     @Override
-    public boolean editLog(LogDao log) {
+    public boolean editLog(MealLog log) {
         return false;
     }
 

@@ -6,13 +6,13 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.SymptomType;
  * The entity class of symptom data.
  * @author Shiyun Zhu
  */
-public class SymptomData {
+public class Symptom {
     SymptomType symptomType;
     String symptomName;
     String symptomInfo;
     int symptomMeasurement;
 
-    public SymptomData(SymptomType symptomType, String symptomName, String symptomInfo, int symptomMeasurement) {
+    public Symptom(SymptomType symptomType, String symptomName, String symptomInfo, int symptomMeasurement) {
         this.symptomType = symptomType;
         this.symptomName = symptomName;
         this.symptomInfo = symptomInfo;

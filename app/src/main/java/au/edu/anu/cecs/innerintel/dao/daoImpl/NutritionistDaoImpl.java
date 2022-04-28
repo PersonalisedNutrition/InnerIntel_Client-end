@@ -1,13 +1,13 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 import au.edu.anu.cecs.innerintel.Bean.Log;
 import au.edu.anu.cecs.innerintel.Bean.Nutritionist;
-import au.edu.anu.cecs.innerintel.dao.UserDataDao;
+import au.edu.anu.cecs.innerintel.dao.UserDao;
 /**
  * Database operations of nutritionists.
  * @author XinyueHu
  */
-public class NutritionistDaoImpl implements UserDataDao<Nutritionist> {
+public class NutritionistDaoImpl implements UserDao<Nutritionist> {
 
     //Implement singleton design pattern
     private static NutritionistDaoImpl userDao = null;

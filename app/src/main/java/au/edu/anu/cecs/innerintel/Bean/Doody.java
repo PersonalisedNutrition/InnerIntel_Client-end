@@ -7,19 +7,19 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.DoodyState;
  * The entity class of doody data.
  * @author Shiyun Zhu
  */
-public class DoodyData{
+public class Doody {
     DoodyState doodyState;
     DoodyColor doodyColor;
 
     String doodyInfo;
 
-    public DoodyData(DoodyState doodyState, DoodyColor doodyColor, String doodyInfo) {
+    public Doody(DoodyState doodyState, DoodyColor doodyColor, String doodyInfo) {
         this.doodyState = doodyState;
         this.doodyColor = doodyColor;
         this.doodyInfo = doodyInfo;
     }
 
-    public DoodyData(DoodyState doodyState, DoodyColor doodyColor) {
+    public Doody(DoodyState doodyState, DoodyColor doodyColor) {
         this.doodyState = doodyState;
         this.doodyColor = doodyColor;
     }

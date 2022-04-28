@@ -1,14 +1,14 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 
 import au.edu.anu.cecs.innerintel.Bean.Client;
-import au.edu.anu.cecs.innerintel.dao.UserDataDao;
+import au.edu.anu.cecs.innerintel.dao.UserDao;
 
 /**
  * Database operations of clients.
  * @author XinyueHu
  */
-public class ClientDaoImpl implements UserDataDao<Client> {
+public class ClientDaoImpl implements UserDao<Client> {
 
     //Implement singleton design pattern
     private static ClientDaoImpl userDao = null;

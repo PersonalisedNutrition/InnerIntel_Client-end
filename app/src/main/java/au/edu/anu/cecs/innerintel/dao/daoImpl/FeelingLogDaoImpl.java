@@ -1,10 +1,9 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 import java.util.Set;
 
-import au.edu.anu.cecs.innerintel.Bean.ExerciseLog;
+import au.edu.anu.cecs.innerintel.Bean.FeelingLog;
 import au.edu.anu.cecs.innerintel.Bean.Log;
-import au.edu.anu.cecs.innerintel.Bean.enumType.ExerciseType;
 import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 
@@ -12,20 +11,20 @@ import au.edu.anu.cecs.innerintel.dao.LogDao;
  * four main method: add / lookup(search) / update(edit) / delete
  * @author Tianqi Tang
  */
-public class ExerciseLogDaoImpl implements LogDao<ExerciseLog> {
+public class FeelingLogDaoImpl implements LogDao<FeelingLog> {
 
     //Implement singleton design pattern
-    private static ExerciseLogDaoImpl exerciseLogDao = null;
+    private static FeelingLogDaoImpl feelingLogDao = null;
 
-    public static ExerciseLogDaoImpl getInstance() {
-        if (exerciseLogDao == null) {
-            exerciseLogDao = new ExerciseLogDaoImpl();
+    public static FeelingLogDaoImpl getInstance() {
+        if (feelingLogDao == null) {
+            feelingLogDao = new FeelingLogDaoImpl();
         }
-        return exerciseLogDao;
+        return feelingLogDao;
     }
 
     @Override
-    public boolean inputLog(ExerciseLog log) {
+    public boolean inputLog(FeelingLog log) {
         return false;
     }
 
@@ -35,7 +34,7 @@ public class ExerciseLogDaoImpl implements LogDao<ExerciseLog> {
     }
 
     @Override
-    public boolean editLog(ExerciseLog log) {
+    public boolean editLog(FeelingLog log) {
         return false;
     }
 

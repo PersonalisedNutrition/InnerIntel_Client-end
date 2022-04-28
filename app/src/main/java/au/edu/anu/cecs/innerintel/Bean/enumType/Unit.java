@@ -1,10 +1,18 @@
 package au.edu.anu.cecs.innerintel.Bean.enumType;
 
 /**
- * Shiyun Zhu
+ * Enumerate food unit
+ *
+ * @author Shuyi Chen
  */
 public enum Unit {
-    METRIC,
-    IMPERIAL;
-
+    G,
+    GRAIN,
+    DRACHM,
+    OUNCE,
+    POUND,
+    ML,
+    GILL,
+    PINT,
+    QUART
 }

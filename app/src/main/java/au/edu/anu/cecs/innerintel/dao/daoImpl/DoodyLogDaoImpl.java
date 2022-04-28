@@ -1,11 +1,9 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 import java.util.Set;
 
 import au.edu.anu.cecs.innerintel.Bean.DoodyLog;
 import au.edu.anu.cecs.innerintel.Bean.Log;
-import au.edu.anu.cecs.innerintel.Bean.enumType.DoodyColor;
-import au.edu.anu.cecs.innerintel.Bean.enumType.DoodyState;
 import au.edu.anu.cecs.innerintel.dao.LogDao;
 
 

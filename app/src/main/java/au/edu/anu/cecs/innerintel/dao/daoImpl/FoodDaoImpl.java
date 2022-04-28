@@ -1,20 +1,19 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-import au.edu.anu.cecs.innerintel.Bean.FoodData;
-import au.edu.anu.cecs.innerintel.dao.FoodDataDao;
-import au.edu.anu.cecs.innerintel.utils.DataBasePropertiesReading;
+import au.edu.anu.cecs.innerintel.Bean.Food;
+import au.edu.anu.cecs.innerintel.dao.FoodDao;
 import au.edu.anu.cecs.innerintel.utils.DataBaseUtils;
 
 /**
  * implement class of the food data
  * @author Shiyun Zhu
  */
-public class FoodDataImpl implements FoodDataDao {
+public class FoodDaoImpl implements FoodDao {
 
     /**
      * Add new data to database.
@@ -23,7 +22,7 @@ public class FoodDataImpl implements FoodDataDao {
      * @throws SQLException if failed in adding.
      */
     @Override
-    public boolean add(FoodData f) throws SQLException {
+    public boolean add(Food f) throws SQLException {
         Connection conn =null;
         PreparedStatement ps = null;
         String sql = "insert into foodData(type,name,measurement,info)values(?,?,?)";
@@ -46,22 +45,22 @@ public class FoodDataImpl implements FoodDataDao {
 
     //TODO: finish other methods.
     @Override
-    public boolean update(FoodData f) throws SQLException {
+    public boolean update(Food f) throws SQLException {
         return false;
     }
 
     @Override
-    public boolean delete(FoodData f) throws SQLException {
+    public boolean delete(Food f) throws SQLException {
         return false;
     }
 
     @Override
-    public FoodData search(String foodName) throws SQLException {
+    public Food search(String foodName) throws SQLException {
         return null;
     }
 
     @Override
-    public List<FoodData> searchAll(FoodData f) throws SQLException {
+    public List<Food> searchAll(Food f) throws SQLException {
         return null;
     }
 }

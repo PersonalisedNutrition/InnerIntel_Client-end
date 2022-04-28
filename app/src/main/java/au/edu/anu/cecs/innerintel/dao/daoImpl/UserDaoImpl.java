@@ -1,16 +1,14 @@
-package au.edu.anu.cecs.innerintel.dao.dataImpl;
+package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
-
-import java.lang.reflect.Type;
 
 import au.edu.anu.cecs.innerintel.Bean.User;
-import au.edu.anu.cecs.innerintel.dao.UserDataDao;
+import au.edu.anu.cecs.innerintel.dao.UserDao;
 
 /**
  * Database operations of all types of users.
  * @author XinyueHu
  */
-public class UserDaoImpl implements UserDataDao<User> {
+public class UserDaoImpl implements UserDao<User> {
 
     //Implement singleton design pattern
     private static UserDaoImpl userDao = null;

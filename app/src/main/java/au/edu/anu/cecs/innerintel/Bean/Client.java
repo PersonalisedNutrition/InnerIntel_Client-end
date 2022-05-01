@@ -11,7 +11,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.BloodType;
  * @author XinyueHu
  */
 public class Client extends User {
-    private final int cid;
+    private int cid;
     private int height;
     private int weight;
     private int age;
@@ -29,6 +29,8 @@ public class Client extends User {
         this.age = age;
         this.bloodType = bloodType;
     }
+
+    public Client(){}
 
     public int getCid() {
         return cid;

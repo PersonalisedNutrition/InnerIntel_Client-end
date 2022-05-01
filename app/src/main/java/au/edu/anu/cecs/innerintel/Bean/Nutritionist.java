@@ -7,9 +7,11 @@ import java.util.LinkedList;
 
 
 public class Nutritionist extends User {
-    private final int nid;
+    private int nid;
     private String intro;
     private LinkedList<Client> conClients;
+
+    public Nutritionist(){}
 
     public Nutritionist(String uid, int nid, String intro, LinkedList<Client> conClients
                         ) {
@@ -17,7 +19,6 @@ public class Nutritionist extends User {
         this.nid = nid;
         this.intro = intro;
         this.conClients = conClients;
-
     }
 
     public Nutritionist(String uid, int nid, String intro) {

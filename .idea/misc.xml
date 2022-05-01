@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ANU_course/Semester_3/COMP8715/Code/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.159375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.16458333333333333" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.159375" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.159375" />
       </map>
     </option>
   </component>

@@ -6,7 +6,7 @@ package au.edu.anu.cecs.innerintel.Bean;
  * @author Shiyun Zhu, Xinyue Hu
  */
 public class Food {
-    private final int fid;
+    private final int foodID;
     private String foodType;
     private String foodName;
     private String description;
@@ -26,27 +26,27 @@ public class Food {
     private float VitaminE;
 
     //Different constructor to instantiate.
-    public Food(int fid, String foodType, String foodName,
+    public Food(int foodID, String foodType, String foodName,
                 String foodPictureURL) {
-        this.fid = fid;
+        this.foodID = foodID;
         this.foodType = foodType;
         this.foodName = foodName;
         this.foodPictureURL = foodPictureURL;
     }
 
-    public Food(int fid, String foodType, String foodName,
-                 String description,
+    public Food(int foodID, String foodType, String foodName,
+                String description,
                 String foodPictureURL) {
-        this.fid = fid;
+        this.foodID = foodID;
         this.foodType = foodType;
         this.foodName = foodName;
         this.description = description;
         this.foodPictureURL = foodPictureURL;
     }
 
-    public Food(int fid, String foodType, String foodName, String description, String foodPictureURL,
+    public Food(int foodID, String foodType, String foodName, String description, String foodPictureURL,
                 float energy, float water, float protein, float fat, float sugar, float fe, float mg, float ca, float vitaminA, float vitaminB, float vitaminC, float vitaminD, float vitaminE) {
-        this.fid = fid;
+        this.foodID = foodID;
         this.foodType = foodType;
         this.foodName = foodName;
         this.description = description;
@@ -66,8 +66,8 @@ public class Food {
         VitaminE = vitaminE;
     }
 
-    public int getFid() {
-        return fid;
+    public int getFoodID() {
+        return foodID;
     }
 
     public String getFoodType() {

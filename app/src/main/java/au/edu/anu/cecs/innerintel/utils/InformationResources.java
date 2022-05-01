@@ -2,43 +2,69 @@ package au.edu.anu.cecs.innerintel.utils;
 
 
 import com.google.common.reflect.TypeToken;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.WriteBatch;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.google.firebase.database.DatabaseReference;
 import au.edu.anu.cecs.innerintel.Bean.Food;
 
 /**
- * Get data from local files
+ * Get data from local files and then upload them to Firebase
  * @author XinyueHu
  */
 public class InformationResources {
-    public List<Food> food=new ArrayList<>();
-
+    public List<Food> foods = new ArrayList<>();
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     /**
-     * Read instances from JSON
-     * @param file
+     * Read instances from food.json and then upload to Firebase
      */
-    public void jsonRead(InputStream file){
-        JsonReader jsonReader=null;
+    public void ReadandUploadFood() {
 
-        final Type class_type = new TypeToken<List<Food>>() {}.getType();
-        Gson gson =new Gson();
-        try{
-            jsonReader=new JsonReader(new InputStreamReader(file));
-        }catch (Exception e) {
+        try {
+            FileInputStream stream = new FileInputStream("app/src/main/java/au/edu/anu/cecs/innerintel/utils/food.json");
+            JsonReader reader = new JsonReader(new InputStreamReader(stream, "UTF-8"));
+            Gson gson = new GsonBuilder().create();
+
+            reader.beginArray();
+            while (reader.hasNext()) {
+                //Read data into object model
+                Food food = gson.fromJson(reader, Food.class);
+                this.foods.add(food);
+                db.collection("Food").document(food.getFoodID()).set(food);
+            }
+            reader.close();
+        } catch (UnsupportedEncodingException e) {
+            System.out.println("The encoding is unsupported!");
+        } catch (FileNotFoundException e) {
+            System.out.println("Cannot find food.json!");
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        List<Food> foods= gson.fromJson(jsonReader, class_type);
 
-
-        this.food.addAll(foods);
+        if(foods.size() > 390){
+            System.out.println("Read and upload successfully!");
+        }else{
+            System.out.println("Cannot read from local file!");
+        }
 
     }
 
+
+
+
 }
+
+
+

@@ -23,23 +23,7 @@ public class FoodDaoImpl implements FoodDao {
      */
     @Override
     public boolean add(Food f) throws SQLException {
-        Connection conn =null;
-        PreparedStatement ps = null;
-        String sql = "insert into foodData(type,name,measurement,info)values(?,?,?)";
-        try{
-            conn = DataBaseUtils.getConnection();
-            ps = conn.prepareStatement(sql);
-            ps.setObject(1,f.getFoodType());
-            ps.setString(2,f.getFoodName());
-            ps.executeUpdate();
-        }catch(SQLException e){
-            e.printStackTrace();
-            throw new SQLException("Failed in adding ");
-        }finally {
-            DataBaseUtils.close(null,ps,conn);
-        }
-
-        return true;
+        return false;
     }
 
     //TODO: finish other methods.

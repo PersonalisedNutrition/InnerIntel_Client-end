@@ -6,7 +6,7 @@ package au.edu.anu.cecs.innerintel.Bean;
  * @author Shiyun Zhu, Xinyue Hu
  */
 public class Food {
-    private int foodID;
+    private String foodID;
     private String foodType;
     private String foodName;
     private String description;
@@ -27,7 +27,7 @@ public class Food {
 
     //Different constructor to instantiate.
     public Food(){}
-    public Food(int foodID, String foodType, String foodName,
+    public Food(String foodID, String foodType, String foodName,
                 String foodPictureURL) {
         this.foodID = foodID;
         this.foodType = foodType;
@@ -35,7 +35,7 @@ public class Food {
         this.foodPictureURL = foodPictureURL;
     }
 
-    public Food(int foodID, String foodType, String foodName,
+    public Food(String foodID, String foodType, String foodName,
                 String description,
                 String foodPictureURL) {
         this.foodID = foodID;
@@ -45,7 +45,7 @@ public class Food {
         this.foodPictureURL = foodPictureURL;
     }
 
-    public Food(int foodID, String foodType, String foodName, String description, String foodPictureURL,
+    public Food(String foodID, String foodType, String foodName, String description, String foodPictureURL,
                 float energy, float water, float protein, float fat, float sugar, float fe, float mg, float ca, float vitaminA, float vitaminB, float vitaminC, float vitaminD, float vitaminE) {
         this.foodID = foodID;
         this.foodType = foodType;
@@ -67,7 +67,7 @@ public class Food {
         VitaminE = vitaminE;
     }
 
-    public int getFoodID() {
+    public String getFoodID() {
         return foodID;
     }
 

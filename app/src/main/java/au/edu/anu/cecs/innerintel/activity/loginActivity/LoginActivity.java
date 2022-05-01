@@ -3,6 +3,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import au.edu.anu.cecs.innerintel.R;
+import au.edu.anu.cecs.innerintel.utils.InformationResources;
 
 
 /**
@@ -20,23 +22,27 @@ import au.edu.anu.cecs.innerintel.R;
  */
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-
+    InformationResources info = new InformationResources();
     EditText email;
     EditText password;
 
     Button login;
     Button signUp;
+    Button upload;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        upload = findViewById(R.id.Firebase);
         //initialize the FirebaseAuth instance.
         mAuth = FirebaseAuth.getInstance();
-
-
-
+        upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                info.ReadandUploadFood();
+            }
+        });
 
 
 
@@ -61,4 +67,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser currentUser) {
     }
+
+
+
+
 }

@@ -6,7 +6,7 @@ package au.edu.anu.cecs.innerintel.Bean;
  * @author Shiyun Zhu, Xinyue Hu
  */
 public class Food {
-    private final int foodID;
+    private int foodID;
     private String foodType;
     private String foodName;
     private String description;
@@ -26,6 +26,7 @@ public class Food {
     private float VitaminE;
 
     //Different constructor to instantiate.
+    public Food(){}
     public Food(int foodID, String foodType, String foodName,
                 String foodPictureURL) {
         this.foodID = foodID;

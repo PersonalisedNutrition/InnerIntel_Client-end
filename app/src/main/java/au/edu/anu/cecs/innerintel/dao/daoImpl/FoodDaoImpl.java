@@ -31,7 +31,6 @@ public class FoodDaoImpl implements FoodDao {
             ps = conn.prepareStatement(sql);
             ps.setObject(1,f.getFoodType());
             ps.setString(2,f.getFoodName());
-            ps.setObject(3,f.getFoodMeasurement());
             ps.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();

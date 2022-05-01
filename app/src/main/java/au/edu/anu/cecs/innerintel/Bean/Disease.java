@@ -6,12 +6,14 @@ import java.io.Serializable;
  * @author XinyueHu
  */
 public class Disease implements Serializable {
-     private final int diseaseID; // once created never change.
+     private int diseaseID; // once created never change.
      private int cid;
      private String StartTime;
      private String EndTime;
      private String type;
      private String medicine;
+
+    public Disease(){}
 
     public Disease(int diseaseID, int cid) {
         this.diseaseID = diseaseID;

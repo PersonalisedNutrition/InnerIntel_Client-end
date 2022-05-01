@@ -4,10 +4,12 @@ package au.edu.anu.cecs.innerintel.Bean;
  * @author XinyueHu
  */
 public class Allergies {
-    private final int allergyID;
+    private int allergyID;
     private int cid;
     private String allergicFood;
     private String allergicDrug;
+
+    public Allergies(){}
 
     public Allergies(int allergyID, int cid) {
         this.allergyID = allergyID;

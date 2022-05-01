@@ -5,10 +5,10 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.UserRole;
 
 /**
  * The entity class of user
- * @author XinyueHu
+ * @author XinyueHu, Shiyun Zhu
  */
 public class User {
-    private final String uid; // one user has only one uid.
+    private String uid; // one user has only one uid.
     private String psd;
     private String name;
     private String sex;
@@ -22,6 +22,8 @@ public class User {
     public User(String uid) {
         this.uid = uid;
     }
+
+    public User(){}
 
     public User(String uid, String name,
                 String sex, String country, String postalCode, String phone, String email, UserRole role, String img) {

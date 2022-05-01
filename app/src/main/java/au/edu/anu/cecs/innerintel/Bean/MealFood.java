@@ -1,5 +1,6 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
+import au.edu.anu.cecs.innerintel.Bean.enumType.CookingMethod;
 import au.edu.anu.cecs.innerintel.Bean.enumType.Unit;
 
 /**
@@ -11,13 +12,13 @@ public class MealFood {
     private Food food;
     private int amount;
     private Unit unit;
-    private String wayOfCooking;
+    private CookingMethod cookingMethod;
 
-    public MealFood(Food food, int amount, Unit unit, String wayOfCooking) {
+    public MealFood(Food food, int amount, Unit unit, CookingMethod cookingMethod) {
         this.food = food;
         this.amount = amount;
         this.unit = unit;
-        this.wayOfCooking = wayOfCooking;
+        this.cookingMethod = cookingMethod;
     }
 
     public Food getFood() {
@@ -44,11 +45,12 @@ public class MealFood {
         this.unit = unit;
     }
 
-    public String getWayOfCooking() {
-        return wayOfCooking;
+    public CookingMethod getCookingMethod() {
+        return cookingMethod;
     }
 
-    public void setWayOfCooking(String wayOfCooking) {
-        this.wayOfCooking = wayOfCooking;
+    public void setCookingMethod(CookingMethod cookingMethod) {
+        this.cookingMethod = cookingMethod;
     }
 }
+

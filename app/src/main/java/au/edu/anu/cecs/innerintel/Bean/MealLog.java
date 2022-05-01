@@ -1,5 +1,7 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
+import java.util.Set;
+
 import au.edu.anu.cecs.innerintel.Bean.enumType.MealType;
 
 /**
@@ -10,11 +12,11 @@ public class MealLog {
     private final int logId; // can never edit, once create || this will relate with log by logId
     private MealType mealType;
     private String mealDuration;
-    private String foodItems;
+    private Set<MealFood> foodItems;
     private String foodPhotos;
     private String moodRecord;
 
-    public MealLog(int logId, MealType mealType, String mealDuration, String foodItems, String foodPhotos, String moodRecord) {
+    public MealLog(int logId, MealType mealType, String mealDuration, Set<MealFood> foodItems, String foodPhotos, String moodRecord) {
         this.logId = logId;
         this.mealType = mealType;
         this.mealDuration = mealDuration;
@@ -40,7 +42,7 @@ public class MealLog {
         this.mealDuration = mealDuration;
     }
 
-    public void setFoodItems(String foodItems) {
+    public void setFoodItems(Set<MealFood> foodItems) {
         this.foodItems = foodItems;
     }
 
@@ -64,7 +66,7 @@ public class MealLog {
         return mealDuration;
     }
 
-    public String getFoodItems() {
+    public Set<MealFood> getFoodItems() {
         return foodItems;
     }
 

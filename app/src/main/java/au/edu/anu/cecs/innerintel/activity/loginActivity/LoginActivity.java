@@ -24,7 +24,6 @@ import au.edu.anu.cecs.innerintel.utils.InformationResources;
  */
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    InformationResources info = new InformationResources();
     EditText email;
     EditText password;
 

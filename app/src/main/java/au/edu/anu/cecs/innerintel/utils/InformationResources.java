@@ -1,6 +1,8 @@
 package au.edu.anu.cecs.innerintel.utils;
 
 
+import android.content.Context;
+
 import com.google.common.reflect.TypeToken;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.WriteBatch;
@@ -22,7 +24,7 @@ import au.edu.anu.cecs.innerintel.Bean.Food;
 
 /**
  * Get data from local files and then upload them to Firebase
- * @author XinyueHu
+ * @author Xinyue Hu
  */
 public class InformationResources {
     public List<Food> foods = new ArrayList<>();
@@ -30,11 +32,11 @@ public class InformationResources {
     /**
      * Read instances from food.json and then upload to Firebase
      */
-    public void ReadandUploadFood() {
+    public void ReadUploadFood(Context context) {
 
         try {
-            FileInputStream stream = new FileInputStream("app/src/main/java/au/edu/anu/cecs/innerintel/utils/food.json");
-            JsonReader reader = new JsonReader(new InputStreamReader(stream, "UTF-8"));
+            JsonReader reader = new JsonReader(new InputStreamReader(
+                    context.getResources().getAssets().open("food.json")));
             Gson gson = new GsonBuilder().create();
 
             reader.beginArray();
@@ -53,11 +55,6 @@ public class InformationResources {
             e.printStackTrace();
         }
 
-        if(foods.size() > 390){
-            System.out.println("Read and upload successfully!");
-        }else{
-            System.out.println("Cannot read from local file!");
-        }
 
     }
 

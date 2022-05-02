@@ -1,6 +1,8 @@
 package au.edu.anu.cecs.innerintel.activity.loginActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,21 +30,15 @@ public class LoginActivity extends AppCompatActivity {
 
     Button login;
     Button signUp;
-    Button upload;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        upload = findViewById(R.id.Firebase);
         //initialize the FirebaseAuth instance.
         mAuth = FirebaseAuth.getInstance();
-        upload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                info.ReadandUploadFood();
-            }
-        });
+
 
 
 

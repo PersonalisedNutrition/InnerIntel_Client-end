@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddLogActivity">
+
+    <com.rishabhharit.roundedimageview.RoundedImageView
+        android:id="@+id/log_iv_headphone"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="48dp"
+        app:cornerRadius="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic_headphoto" />
+
+    <TextView
+        android:id="@+id/log_tv_username"
+        android:layout_width="241dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Summer Young"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_iv_headphone" />
+
+    <TextView
+        android:id="@+id/log_tv_question"
+        android:layout_width="308dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:background="#DAF3F2"
+        android:gravity="center"
+        android:text="What kind of Log do you want to add?"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:circularflow_radiusInDP="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_tv_username" />
+
+    <Button
+        android:id="@+id/log_btn_addMeal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:background="#08B0AA"
+        android:text="Meal"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_tv_question" />
+
+    <Button
+        android:id="@+id/log_btn_addFeeling"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:background="#016B81"
+        android:text="Feeling"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/log_btn_addExcrement"
+        app:layout_constraintTop_toBottomOf="@+id/log_btn_addSymptom" />
+
+    <Button
+        android:id="@+id/log_btn_addExcrement"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:background="#DBA19A"
+        android:text="Excrement"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_btn_addMeal" />
+
+    <Button
+        android:id="@+id/log_btn_addSymptom"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:background="#E6344A"
+        android:text="Symptom"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/log_btn_addMeal"
+        app:layout_constraintTop_toBottomOf="@+id/log_tv_question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

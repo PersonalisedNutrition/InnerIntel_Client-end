@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="au.edu.anu.cecs.innerintel">
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,26 +18,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerIntel">
         <activity
-            android:name=".activity.loginActivity.RegisterActivity"
+            android:name=".activity.AddMealActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SplashActivity"
+            android:name=".activity.AddLogActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
+        </activity> <!-- <activity -->
+        <!-- android:name=".activity.AddlogActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".activity.loginActivity.RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.loginActivity.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"/>
-
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

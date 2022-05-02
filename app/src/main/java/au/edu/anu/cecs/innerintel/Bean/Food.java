@@ -19,6 +19,7 @@ public class Food {
     private float Fe;
     private float Mg;
     private float Ca;
+    private float K;
     private float VitaminA;
     private float VitaminB;
     private float VitaminC;
@@ -45,8 +46,9 @@ public class Food {
         this.foodPictureURL = foodPictureURL;
     }
 
+
     public Food(String foodID, String foodType, String foodName, String description, String foodPictureURL,
-                float energy, float water, float protein, float fat, float sugar, float fe, float mg, float ca, float vitaminA, float vitaminB, float vitaminC, float vitaminD, float vitaminE) {
+                float energy, float water, float protein, float fat, float sugar, float fe, float mg, float ca, float k, float vitaminA, float vitaminB, float vitaminC, float vitaminD, float vitaminE) {
         this.foodID = foodID;
         this.foodType = foodType;
         this.foodName = foodName;
@@ -60,6 +62,7 @@ public class Food {
         Fe = fe;
         Mg = mg;
         Ca = ca;
+        K = k;
         VitaminA = vitaminA;
         VitaminB = vitaminB;
         VitaminC = vitaminC;
@@ -166,6 +169,15 @@ public class Food {
     public void setCa(float ca) {
         Ca = ca;
     }
+
+    public float getK() {
+        return K;
+    }
+
+    public void setK(float k) {
+        K = k;
+    }
+
 
     public float getVitaminA() {
         return VitaminA;

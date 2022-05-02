@@ -7,29 +7,32 @@
     tools:context=".activity.AddMealActivity">
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="88dp"
+        android:id="@+id/addmeal_btn_time"
+        android:layout_width="90dp"
         android:layout_height="35dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@color/mainColor"
         android:text="Time"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/addmeal_tv_time"
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_btn_date" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/addmeal_tv_time"
         android:layout_width="200dp"
         android:layout_height="35dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="@dimen/left_right_margin"
         android:layout_marginTop="16dp"
+        android:background="@color/white"
         android:gravity="center"
         android:text="XX-XX"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_date" />
 
     <TextView
         android:id="@+id/textView"
@@ -39,7 +42,7 @@
         android:gravity="center"
         android:text="Add Meal"
         android:textAlignment="center"
-        android:textColor="#009961"
+        android:textColor="@color/mainColor"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,8 +52,8 @@
         android:id="@+id/addmeal_btn_takephoto1"
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginTop="16dp"
         android:background="@drawable/pic_takephoto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -59,20 +62,21 @@
         android:id="@+id/addmeal_btn_takephoto2"
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
         android:background="@drawable/pic_takephoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addmeal_btn_takephoto1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/addmeal_tv_date"
         android:layout_width="200dp"
         android:layout_height="35dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="@dimen/left_right_margin"
         android:layout_marginTop="16dp"
+        android:background="@color/white"
         android:gravity="center"
         android:text="XX-XX-XXXX"
         android:textAlignment="center"
@@ -81,25 +85,69 @@
         app:layout_constraintTop_toBottomOf="@+id/addmeal_btn_takephoto1" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="88dp"
+        android:id="@+id/addmeal_btn_date"
+        android:layout_width="90dp"
         android:layout_height="35dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@color/mainColor"
         android:text="Date"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/addmeal_tv_date"
         app:layout_constraintTop_toBottomOf="@+id/addmeal_btn_takephoto2" />
 
     <Spinner
         android:id="@+id/addmeal_spi_mealtype"
         android:layout_width="316dp"
         android:layout_height="38dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="@dimen/left_right_margin"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_time" />
+
+    <TextView
+        android:id="@+id/addmeal_tv_foods"
+        android:layout_width="200dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:text="Apple,100,g,raw; \n Milk, 50, ml, raw;"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_spi_mealtype" />
+
+    <Button
+        android:id="@+id/addmeal_btn_addfood"
+        android:layout_width="90dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@color/mainColor"
+        android:text="Add Food"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addmeal_tv_foods"
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_spi_mealtype" />
+
+    <Button
+        android:id="@+id/addmeal_btn_addmeal"
+        android:layout_width="315dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@color/mainColor"
+        android:text="Add Meal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_foods" />
 </androidx.constraintlayout.widget.ConstraintLayout>

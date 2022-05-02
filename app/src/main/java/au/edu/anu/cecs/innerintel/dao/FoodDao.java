@@ -8,21 +8,25 @@ import au.edu.anu.cecs.innerintel.Bean.Food;
 /**
  * Interface of the basic database
  * @author Shiyun Zhu
+ * @author Xinyue Hu
  */
 public interface FoodDao {
     //add method
-    public boolean add(Food f) throws SQLException;
+    public void add(String key,Food f) throws SQLException;
 
     //update method
-    public boolean update(Food f) throws SQLException;
+    public void update(String key,Food f) throws SQLException;
 
     //delete method
-    public boolean delete(Food f) throws  SQLException;
+    public void delete(String key, Food f) throws  SQLException;
 
     //search method
-    public Food search(String foodName) throws SQLException;
+    public List<Food> searchByName(String foodName) throws SQLException;
 
     //search all
-    public List<Food> searchAll(Food f) throws SQLException;
+    public List<Food> searchAll() throws SQLException;
+
+    //search a type of food
+    List<Food> searchByType(String foodType) throws SQLException;
 
 }

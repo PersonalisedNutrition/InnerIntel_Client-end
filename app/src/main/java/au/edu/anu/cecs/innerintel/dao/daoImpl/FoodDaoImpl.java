@@ -27,7 +27,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 /**
- * implement class of the food data
+ * This class is the implementation of
+ * basic database operations of food data
  * @author Shiyun Zhu
  * @author Xinyue Hu
  */
@@ -94,7 +95,7 @@ public class FoodDaoImpl implements FoodDao {
     }
 
     @Override
-    public void delete(String key,Food f) throws SQLException {
+    public void delete(String key) throws SQLException {
         db.collection("Food").document(key)
                 .delete()
                 .addOnSuccessListener(new OnSuccessListener<Void>() {

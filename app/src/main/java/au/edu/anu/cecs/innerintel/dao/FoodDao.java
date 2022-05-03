@@ -18,7 +18,7 @@ public interface FoodDao {
     public void update(String key,Food f) throws SQLException;
 
     //delete method
-    public void delete(String key, Food f) throws  SQLException;
+    public void delete(String key) throws  SQLException;
 
     //search method
     public List<Food> searchByName(String foodName) throws SQLException;

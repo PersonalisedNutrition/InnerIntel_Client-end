@@ -2,13 +2,13 @@ package au.edu.anu.cecs.innerintel.utils;
 
 
 import android.content.Context;
+import android.util.JsonReader;
 
-import com.google.common.reflect.TypeToken;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.WriteBatch;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.stream.JsonReader;
+
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import au.edu.anu.cecs.innerintel.Bean.Food;
 
 /**
- * Get data from local files and then upload them to Firebase
+ * Read data from local files and then upload instances to Firebase
  * @author Xinyue Hu
  */
 public class InformationResources {
@@ -42,7 +42,7 @@ public class InformationResources {
             reader.beginArray();
             while (reader.hasNext()) {
                 //Read data into object model
-                Food food = gson.fromJson(reader, Food.class);
+                Food food = gson.fromJson(String.valueOf(reader), Food.class);
                 this.foods.add(food);
                 db.collection("Food").document(food.getFoodID()).set(food);
             }

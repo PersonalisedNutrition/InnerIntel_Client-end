@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/test"
+        android:id="@+id/homepage_et_search"
         android:layout_width="292dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Search" />
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/homepage_lv_food"
+        android:layout_width="327dp"
+        android:layout_height="438dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_et_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -41,7 +41,8 @@
             android:checked="true"
             android:gravity="center"
             android:text="Daily Summary"
-            android:textColor="#979595" />
+            android:textColor="#979595"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/homepage_rb_fooditems"
@@ -52,7 +53,8 @@
             android:button="@null"
             android:gravity="center"
             android:text="FoodItems"
-            android:textColor="#979595" />
+            android:textColor="#979595"
+            android:textSize="20sp" />
     </RadioGroup>
 
     <androidx.viewpager.widget.ViewPager

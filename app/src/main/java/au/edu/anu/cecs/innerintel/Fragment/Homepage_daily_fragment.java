@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -85,6 +86,7 @@ public class Homepage_daily_fragment extends Fragment {
     private String[] content = {"123", "123", "123"};
     private String[] cal = {"KJ", "G", "T"};
     private int imageViews = R.mipmap.ic_launcher;
+    private Button generate;
     private void initView(){
         lists = new ArrayList<>();
         for (int i = 0; i < theme.length; i++) {
@@ -95,7 +97,7 @@ public class Homepage_daily_fragment extends Fragment {
             map.put("cal",cal[i]);
             lists.add(map);
         }
-
+        generate=root.findViewById(R.id.homepage_bt_dailysub);
         adapter=new SimpleAdapter(this.getActivity(),lists,R.layout.homepage_daily_lvitem,new
                 String[] {"image","theme","content","cal"},new int[]{R.id.homepage_dalit_img,R.id.homepage_tv_theme,R.id.homepage_tv_num,R.id.homepage_daily_cal});
         listView=(ListView) root.findViewById(R.id.homepage_lv_daily);

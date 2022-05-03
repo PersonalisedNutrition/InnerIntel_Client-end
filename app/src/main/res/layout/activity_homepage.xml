@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomepageActivity">
+
+
+    <TextView
+        android:id="@+id/homepage_tv_head"
+        android:layout_width="413dp"
+        android:layout_height="73dp"
+        android:background="@color/mainColor"
+        android:gravity="bottom"
+        android:text="Main"
+        android:textAlignment="center"
+        android:textColor="#FFFBFB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/homepage_rg"
+        android:layout_width="412dp"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_tv_head">
+
+        <RadioButton
+            android:id="@+id/homepage_rb_daily"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Daily Summary"
+            android:textColor="#979595" />
+
+        <RadioButton
+            android:id="@+id/homepage_rb_fooditems"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:button="@null"
+            android:gravity="center"
+            android:text="FoodItems"
+            android:textColor="#979595" />
+    </RadioGroup>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/homepage_viewPager"
+        android:layout_width="409dp"
+        android:layout_height="509dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepage_rg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

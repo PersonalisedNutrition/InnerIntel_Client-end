@@ -7,6 +7,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.List;
 
+/**
+ * @author Tianqi Tang
+ */
 public class HomepageViewPagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragments;

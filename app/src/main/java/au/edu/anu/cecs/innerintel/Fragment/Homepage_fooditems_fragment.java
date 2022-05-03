@@ -13,10 +13,9 @@ import javax.annotation.Nullable;
 
 import au.edu.anu.cecs.innerintel.R;
 
+
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link Homepage_fooditems_fragment#newInstance} factory method to
- * create an instance of this fragment.
+ * @author Tianqi Tang
  */
 public class Homepage_fooditems_fragment extends Fragment {
     @Nullable

@@ -20,7 +20,9 @@ import javax.annotation.Nullable;
 
 import au.edu.anu.cecs.innerintel.R;
 
-
+/**
+ * @author Tianqi Tang
+ */
 public class Homepage_daily_fragment extends Fragment {
     private ListView listView;
     private View root;

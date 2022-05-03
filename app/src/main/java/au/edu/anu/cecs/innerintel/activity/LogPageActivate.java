@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import au.edu.anu.cecs.innerintel.R;
 
+/**
+ * @author Tianqi Tang
+ */
 public class LogPageActivate extends AppCompatActivity {
 
     @Override

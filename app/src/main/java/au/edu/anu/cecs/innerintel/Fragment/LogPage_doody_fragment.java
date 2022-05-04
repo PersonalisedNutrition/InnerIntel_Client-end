@@ -2,11 +2,19 @@ package au.edu.anu.cecs.innerintel.Fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import au.edu.anu.cecs.innerintel.R;
 
@@ -14,7 +22,8 @@ import au.edu.anu.cecs.innerintel.R;
  * @author Tianqi Tang
  */
 public class LogPage_doody_fragment extends Fragment {
-
+    private ListView listView;
+    private View root;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -47,18 +56,32 @@ public class LogPage_doody_fragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container,
+                             @NonNull Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_log_page_doody_fragment, container, false);
+        if (root == null) {
+            root = inflater.inflate(R.layout.fragment_log_page_doody_fragment, container, false);
+        }
+        initView();
+        return root;
+    }
+    private SimpleAdapter adapter;
+    private List<Map<String, Object>> lists;
+    private String[] date = {"2022/4/23", "2022/4/14"};
+    private String[] time = {"10:00", "11:00"};
+    private String[] type = {"not well", "bad"};
+    private void initView(){
+        lists = new ArrayList<>();
+        for (int i = 0; i < date.length; i++) {
+            Map<String, Object> map = new HashMap<>();
+            map.put("data", date[i]);
+            map.put("time", time[i]);
+            map.put("type", type[i]);
+            lists.add(map);
+        }
+        adapter=new SimpleAdapter(this.getActivity(),lists,R.layout.logpage_meal_fragment_item,new
+                String[] {"data","time","type"},new int[]{R.id.logpage_item_date,R.id.logpage_item_time,R.id.logpage_item_type});
+        listView=(ListView) root.findViewById(R.id.logpage_lv_doodyfrag);
+        listView.setAdapter(adapter);
     }
 }

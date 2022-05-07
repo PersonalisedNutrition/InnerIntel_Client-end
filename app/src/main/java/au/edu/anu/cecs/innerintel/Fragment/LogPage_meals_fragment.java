@@ -1,5 +1,6 @@
 package au.edu.anu.cecs.innerintel.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,15 +9,20 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import au.edu.anu.cecs.innerintel.R;
+import au.edu.anu.cecs.innerintel.activity.AddMealActivity;
+import au.edu.anu.cecs.innerintel.activity.LogDetailActivity;
 
 /**
  * @author Tianqi Tang
@@ -92,5 +98,15 @@ public class LogPage_meals_fragment extends Fragment {
                 String[] {"data","time","type"},new int[]{R.id.logpage_item_date,R.id.logpage_item_time,R.id.logpage_item_type});
         listView=(ListView) root.findViewById(R.id.logpage_lv_mealsfrag);
         listView.setAdapter(adapter);
+
+        //click
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), LogDetailActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

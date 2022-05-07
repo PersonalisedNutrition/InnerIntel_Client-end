@@ -12,6 +12,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

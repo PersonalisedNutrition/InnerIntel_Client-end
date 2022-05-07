@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/homepage_tv_head"
-        android:layout_width="413dp"
-        android:layout_height="73dp"
+        android:layout_width="410dp"
+        android:layout_height="50dp"
         android:background="@color/mainColor"
         android:gravity="bottom"
         android:text="Main"

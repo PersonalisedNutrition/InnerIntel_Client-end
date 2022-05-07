@@ -85,7 +85,7 @@ public class Homepage_daily_fragment extends Fragment {
     private String[] theme = {"Calorie", "Water", "Suger"};
     private String[] content = {"123", "123", "123"};
     private String[] cal = {"KJ", "G", "T"};
-    private int imageViews = R.mipmap.ic_launcher;
+    private int imageViews = R.drawable.pic_foodsummary;
     private Button generate;
     private void initView(){
         lists = new ArrayList<>();

@@ -10,7 +10,7 @@
         android:layout_width="60dp"
         android:layout_height="59dp"
         android:layout_margin="5dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/pic_foodsummary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="au.edu.anu.cecs.innerintel">
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
@@ -18,10 +19,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerIntel">
         <activity
-            android:name=".activity.AddMealActivity"
+            android:name=".activity.LogDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HomepageActivity"
             android:exported="false" />
         <activity
             android:name=".activity.AddLogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddMealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LogPageActivate"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

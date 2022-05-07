@@ -22,27 +22,89 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/left_right_margin"
+        android:id="@+id/logpage_et_search"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:gravity="center"
+        android:inputType="textPersonName"
         android:text="Search"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logpage_tv_head2" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="@dimen/left_right_margin"
-        android:text="Button"
+
+    <RadioGroup
+        android:id="@+id/logpage_rg_title"
+        android:layout_width="413dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/logpage_tv_head2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logpage_et_search">
+
+        <RadioButton
+            android:id="@+id/logpage_rb_maels"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Meals"
+            android:textColor="#979595"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/logpage_rb_symptom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Symptom"
+            android:textColor="#979595"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/logpage_rb_doody"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Doody"
+            android:textColor="#979595"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/logpage_rb_feelings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Feelings"
+            android:textColor="#979595"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/logpage_viewPager"
+        android:layout_width="352dp"
+        android:layout_height="418dp"
+        android:layout_marginStart="@dimen/left_right_margin"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logpage_rg_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,8 +19,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerIntel">
         <activity
-            android:name=".activity.loginActivity.QuestionThreeActivity"
+            android:name=".activity.MePageActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity.loginActivity.QuestionThreeActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.loginActivity.QuestionTwoActivity"
             android:exported="true" />
@@ -47,8 +50,11 @@
             android:name=".activity.LogDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LogPageActivate"
-            android:exported="false" />
+            android:name=".activity.LogPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MessageActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.AddLogActivity"
             android:exported="false" />

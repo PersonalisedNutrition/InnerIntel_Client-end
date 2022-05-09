@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerIntel">
         <activity
+            android:name=".activity.MessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.AddFoodActivity"
             android:exported="false" />
         <activity

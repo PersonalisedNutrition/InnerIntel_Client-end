@@ -85,6 +85,8 @@ public class LogPageActivity extends AppCompatActivity {
             }
         });
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
+        bottomNavigationView.setLabelVisibilityMode(1);
+        bottomNavigationView.getMenu().getItem(1).setChecked(true);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
@@ -93,16 +95,25 @@ public class LogPageActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
+            Intent intent;
             switch (item.getItemId()) {
                 case R.id.navigation_homepage:
-                    Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                    intent= new Intent(getApplicationContext(), HomepageActivity.class);
                     startActivity(intent);
                     return true;
                 case R.id.navigation_logs:
-                    Intent intent1= new Intent(getApplicationContext(), LogPageActivity.class);
-                    startActivity(intent1);
+                    intent= new Intent(getApplicationContext(), LogPageActivity.class);
+                    startActivity(intent);
                     return true;
+                case R.id.navigation_add:
+                    intent= new Intent(getApplicationContext(), AddLogActivity.class);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_message:
+                    intent= new Intent(getApplicationContext(), MessageActivity.class);
+                    startActivity(intent);
+                    return true;
+
             }
             return false;
         }

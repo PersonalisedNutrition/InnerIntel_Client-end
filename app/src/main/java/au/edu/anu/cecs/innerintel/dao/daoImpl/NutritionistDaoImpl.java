@@ -1,160 +1,152 @@
 package au.edu.anu.cecs.innerintel.dao.daoImpl;
 
-import android.widget.Toast;
+import android.annotation.SuppressLint;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.Source;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
-import au.edu.anu.cecs.innerintel.Bean.Client;
 import au.edu.anu.cecs.innerintel.Bean.Log;
 import au.edu.anu.cecs.innerintel.Bean.Nutritionist;
-import au.edu.anu.cecs.innerintel.Bean.User;
 import au.edu.anu.cecs.innerintel.dao.UserDao;
-import au.edu.anu.cecs.innerintel.utils.FirebaseUtils;
-
 /**
  * Database operations of nutritionists.
  * @author XinyueHu
+ * @author Shiyun Zhu
  */
 public class NutritionistDaoImpl implements UserDao<Nutritionist> {
-
+    FirebaseFirestore db;
     //Implement singleton design pattern
     private static NutritionistDaoImpl userDao = null;
-    private FirebaseFirestore db;
-    private FirebaseUser currentUser;
-    private List<Nutritionist> nutritionists;
-    private Nutritionist nutritionist;
-    private String TAG = "Nutritionist";
-    private AppCompatActivity act;
 
-    public NutritionistDaoImpl(AppCompatActivity act) {
-        FirebaseUtils fu = new FirebaseUtils();
-        db = fu.getCloudStore();
-        currentUser = fu.getCurrentUser();
-        this.act = act;
+    private NutritionistDaoImpl(){
+        this.db = FirebaseFirestore.getInstance();
     }
 
+    public static NutritionistDaoImpl getInstance() {
+        if (userDao == null) {
+            userDao = new NutritionistDaoImpl();
+        }
+        return userDao;
+    }
 
     public Log readReport(){return null;}
 
-
     @Override
-    public void addUser(String key, Nutritionist user) {
-        nutritionists = searchAll();
-        if (nutritionists.contains(user)){
-            Toast.makeText(act.getBaseContext(),
-                    "Nutritionist already exist", Toast.LENGTH_SHORT).show();
-        }else {
-            db.collection("Nutritionists").document(key)
-                    .set(user)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            android.util.Log.d(TAG, "Successfully adding new nutritionist");
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            android.util.Log.w(TAG, "Error adding nutritionist ", e);
-                        }
-                    });
-        }
-    }
+    public boolean addUser(Nutritionist usr) {
 
-    @Override
-    public void deleteUser(String key, Nutritionist user) {
-        db.collection("Nutritionists").document(key)
-                .delete()
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
+        String TAG = "add nutritionist";
+        // Create a new user with a first and last name
+        Map<String, Object> user = new HashMap<>();
+        user.put("name", usr.getName());
+        user.put("phone", usr.getPhone());
+        user.put("intro", usr.getIntro());
+        user.put("country",usr.getCountry());
+        user.put("img",usr.getImg());
+
+
+        // Add a new document with a generated ID
+        db.collection("users")
+                .add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
-                    public void onSuccess(Void aVoid) {
-                        android.util.Log.d(TAG, "Nutritionist successfully deleted!");
+                    public void onSuccess(DocumentReference documentReference) {
+                        android.util.Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        android.util.Log.w(TAG, "Error deleting nutritionist", e);
+                        android.util.Log.w(TAG, "Error adding document", e);
                     }
                 });
+
+        return false;
     }
 
     @Override
-    public void updateProfile(String key, Nutritionist user) {
-        nutritionists = searchAll();
-        if (!nutritionists.contains(user)){
-            Toast.makeText(act.getBaseContext(),
-                    "The nutritionist is not exist", Toast.LENGTH_SHORT).show();
-        }else {
-            db.collection("Nutritionists").document(key)
-                    .set(user)
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            android.util.Log.d(TAG, "successfully updated");
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            android.util.Log.w(TAG, "error updating", e);
-                        }
-                    });
+    public boolean deleteUser(Nutritionist usr) {
+        String TAG = "delete nutritionist";
+        db.collection("nutritionist").document(String.valueOf(usr.getNid()))
+                .delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        android.util.Log.d(TAG, "DocumentSnapshot successfully deleted!");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        android.util.Log.w(TAG, "Error deleting document", e);
+                    }
+                });
 
-        }
+
+        return false;
     }
 
     @Override
-    public Nutritionist searchUserByID(String id) {
-        DocumentReference docRef = db.collection("Nutritionists").document(id);
-        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+    public boolean updateProfile(Nutritionist usr) {
+        String TAG = "update Profile of nutritionist";
+
+        DocumentReference washingtonRef = db.collection("nutritionist").document(String.valueOf(usr.getNid()));
+        // Set the element field of the user
+        washingtonRef
+                .update("conClients", usr.getConClients())
+
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @SuppressLint("LongLogTag")
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        android.util.Log.d(TAG, "DocumentSnapshot successfully updated!");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @SuppressLint("LongLogTag")
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        android.util.Log.w(TAG, "Error updating document", e);
+                    }
+                });
+
+        return false;
+    }
+
+    @Override
+    public Nutritionist searchUser(String msg) {
+
+        String TAG = "search nutritionist";
+        DocumentReference docRef = db.collection("nutritionist").document(String.valueOf("msg"));
+
+        // Source can be CACHE, SERVER, or DEFAULT.
+        Source source = Source.CACHE;
+
+        // Get the document, forcing the SDK to use the offline cache
+        docRef.get(source).addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                nutritionist = new Nutritionist();
-                nutritionist = documentSnapshot.toObject(Nutritionist.class);
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    // Document found in the offline cache
+                    DocumentSnapshot document = task.getResult();
+                    android.util.Log.d(TAG, "Cached document data: " + document.getData());
+                } else {
+                    android.util.Log.d(TAG, "Cached get failed: ", task.getException());
+                }
             }
         });
-        return nutritionist;
-    }
-
-    @Override
-    public List<Nutritionist> searchUserByName(String name) {
         return null;
-    }
-
-    @Override
-    public List<Nutritionist> searchAll() {
-        nutritionists = new ArrayList<>();
-        db.collection("Nutritionists")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                nutritionists.add( document.toObject(Nutritionist.class));
-                            }
-                        } else {
-                            Toast.makeText(act.getBaseContext(),
-                                    "Oops, the nutritionist list is gone", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-        return nutritionists;
     }
 }

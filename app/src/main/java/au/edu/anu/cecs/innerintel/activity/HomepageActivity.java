@@ -64,6 +64,7 @@ public class HomepageActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.navigation);
         bottomNavigationView.setLabelVisibilityMode(1);
         bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        bottomNavigationView.setItemIconSize(115);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

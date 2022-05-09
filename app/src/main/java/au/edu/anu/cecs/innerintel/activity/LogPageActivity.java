@@ -87,6 +87,7 @@ public class LogPageActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setLabelVisibilityMode(1);
         bottomNavigationView.getMenu().getItem(1).setChecked(true);
+        bottomNavigationView.setItemIconSize(115);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 

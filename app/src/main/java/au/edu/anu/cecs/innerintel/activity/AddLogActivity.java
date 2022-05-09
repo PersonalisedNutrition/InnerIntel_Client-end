@@ -39,6 +39,7 @@ public class AddLogActivity extends AppCompatActivity {
         btnAddMeal.setOnClickListener(allListener);
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setLabelVisibilityMode(1);
+        bottomNavigationView.setItemIconSize(115);
         bottomNavigationView.getMenu().getItem(2).setChecked(true);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }

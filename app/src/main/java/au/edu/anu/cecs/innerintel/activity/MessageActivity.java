@@ -20,6 +20,7 @@ public class MessageActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setLabelVisibilityMode(1);
         bottomNavigationView.getMenu().getItem(3).setChecked(true);
+        bottomNavigationView.setItemIconSize(115);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 }
 

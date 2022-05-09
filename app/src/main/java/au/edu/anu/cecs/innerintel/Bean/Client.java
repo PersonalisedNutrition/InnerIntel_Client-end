@@ -2,6 +2,7 @@ package au.edu.anu.cecs.innerintel.Bean;
 
 
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 import au.edu.anu.cecs.innerintel.Bean.enumType.BloodType;
@@ -10,7 +11,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.BloodType;
  * The entity class of client
  * @author XinyueHu
  */
-public class Client extends User {
+public class Client extends User implements Serializable {
     private int cid;
     private int height;
     private int weight;
@@ -100,6 +101,11 @@ public class Client extends User {
     public String getAdvice() {return null;}
     public String readNutritionistInfo() {return null;}
     public int addNutritionist() {return 0;}
+
+
+
+
+
 
 
 }

@@ -19,28 +19,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerIntel">
         <activity
+            android:name=".activity.AddFoodActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.LogDetailActivity"
             android:exported="false" />
         <activity
             android:name=".activity.HomepageActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.AddLogActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.AddMealActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LogPageActivate"
+            android:name=".activity.LogPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddLogActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- <activity -->
-        <!-- android:name=".activity.AddlogActivity" -->
-        <!-- android:exported="false" /> -->
+        </activity>
         <activity
             android:name=".activity.loginActivity.RegisterActivity"
             android:exported="false" />

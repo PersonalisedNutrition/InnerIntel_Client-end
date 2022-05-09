@@ -70,7 +70,7 @@
     </RadioGroup>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/homepage_viewPager"
+        android:id="@+id/addfood_viewPager"
         android:layout_width="0dp"
         android:layout_height="509dp"
         app:layout_constraintEnd_toEndOf="parent"

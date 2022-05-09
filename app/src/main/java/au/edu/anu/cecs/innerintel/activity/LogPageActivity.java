@@ -22,13 +22,13 @@ import au.edu.anu.cecs.innerintel.R;
 /**
  * @author Tianqi Tang
  */
-public class LogPageActivate extends AppCompatActivity {
+public class LogPageActivity extends AppCompatActivity {
     private List<Fragment> fragmentList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_log_page_activate);
+        setContentView(R.layout.activity_log_page);
 
         fragmentList.add(new LogPage_meals_fragment());
         fragmentList.add(new LogPage_symptom_fragment());

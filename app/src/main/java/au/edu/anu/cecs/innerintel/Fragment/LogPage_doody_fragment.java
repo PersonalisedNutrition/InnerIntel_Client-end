@@ -60,7 +60,7 @@ public class LogPage_doody_fragment extends Fragment {
                              @NonNull Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (root == null) {
-            root = inflater.inflate(R.layout.fragment_log_page_doody_fragment, container, false);
+            root = inflater.inflate(R.layout.fragment_log_page_doody, container, false);
         }
         initView();
         return root;

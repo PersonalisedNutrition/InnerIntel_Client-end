@@ -12,16 +12,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import au.edu.anu.cecs.innerintel.R;
-import au.edu.anu.cecs.innerintel.activity.AddMealActivity;
 import au.edu.anu.cecs.innerintel.activity.LogDetailActivity;
 
 /**
@@ -75,7 +72,7 @@ public class LogPage_meals_fragment extends Fragment {
                              @NonNull Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (root == null) {
-            root = inflater.inflate(R.layout.fragment_log_page_meals_fragment, container, false);
+            root = inflater.inflate(R.layout.fragment_log_page_meals, container, false);
         }
         initView();
         return root;

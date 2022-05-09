@@ -13,6 +13,11 @@ import au.edu.anu.cecs.innerintel.Bean.User;
 import au.edu.anu.cecs.innerintel.Bean.enumType.LogType;
 import au.edu.anu.cecs.innerintel.R;
 
+/**
+ * Interact the add log page
+ *
+ * @author Shuyi Chen
+ */
 public class AddLogActivity extends AppCompatActivity {
     Button btnAddMeal;
     User loginUser;

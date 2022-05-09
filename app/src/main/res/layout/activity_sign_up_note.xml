@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activity.loginActivity.SignUpNoteActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFBFB"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp" />
+
+
+    <Button
+        android:id="@+id/signupAsU"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@color/mainColor"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
+        android:text="Sign Up As user" />
+
+
+
+
+    <Button
+        android:id="@+id/signupAsN"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@color/mainColor"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
+        android:text="Sign Up As Nutritionist" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="486dp"
+        android:layout_height="253dp"
+        android:layout_marginTop="95dp"
+        app:srcCompat="@drawable/login_main1" />
+
+
+</LinearLayout>

@@ -6,14 +6,22 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+
     tools:context=".activity.loginActivity.RegisterActivity">
 
-    <ImageView
-        android:src="@drawable/userimage"
-        android:layout_marginTop="75dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/userImage"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFBFB"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp" />
+
+
 
     <EditText
         android:id="@+id/userName"
@@ -53,15 +61,19 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:background="@color/mainColor"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
         android:text="SignUp" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="720dp"
-        android:layout_height="637dp"
-        android:layout_marginTop="85dp"
-        android:src="@drawable/login_main1" />
+        android:id="@+id/imageView3"
+        android:layout_width="463dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/login_main1" />
 
 
 </LinearLayout>
+
 

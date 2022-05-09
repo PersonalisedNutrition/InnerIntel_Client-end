@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activity.loginActivity.QuestionThreeActivity">
+    <TextView
+        android:id="@+id/ques3View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFBFB"
+        android:gravity="center"
+        android:text="Basic Info"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp" />
+
+
+
+    <TextView
+        android:id="@+id/allergen"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:hint="Allergen"
+        android:gravity="center"
+        android:textSize="18dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/medicalRecord"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:hint="Medical Record"
+        android:gravity="center"
+        android:textSize="18dp"
+
+        />
+
+
+
+
+    <Button
+        android:id="@+id/ques3NextButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@color/mainColor"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
+        android:text="Next" />
+
+    <ImageView
+        android:id="@+id/ques3ImageView"
+        android:layout_width="463dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/login_main2" />
+</LinearLayout>

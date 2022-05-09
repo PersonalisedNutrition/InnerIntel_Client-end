@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.loginActivity.ProfileActivity">
+
+    <TextView
+        android:id="@+id/profile1View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFBFB"
+        android:gravity="center"
+        android:text="Select profile"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp" />
+
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/userimage"
+
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/getStartButton"
+        android:layout_width="225dp"
+        android:layout_height="54dp"
+        android:text="Get Started"
+        android:layout_marginTop="60dp"
+        android:background="@color/mainColor"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
+        app:layout_constraintTop_toBottomOf="@+id/userImage"/>
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="463dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        app:srcCompat="@drawable/login_main2" />
+
+
+
+</LinearLayout>

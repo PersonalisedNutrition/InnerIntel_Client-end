@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.loginActivity.QuestionOneActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/ques1View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFBFB"
+        android:gravity="center"
+        android:text="Basic Info"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/mainColor"
+        android:textSize="50sp" />
+
+
+
+    <EditText
+        android:id="@+id/country"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Country" />
+
+
+    <EditText
+
+        android:id="@+id/zipCode"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Zip code" />
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Birthday"
+        android:gravity="center"
+        android:textSize="18dp"
+
+         />
+
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Physiological gender"
+        android:gravity="center"
+        android:textSize="18dp"
+         />
+
+    <Button
+        android:id="@+id/ques1NextButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/mainColor"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
+        android:text="Next" />
+
+    <ImageView
+        android:id="@+id/ques1ImageView"
+        android:layout_width="463dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/login_main2" />
+
+</LinearLayout>

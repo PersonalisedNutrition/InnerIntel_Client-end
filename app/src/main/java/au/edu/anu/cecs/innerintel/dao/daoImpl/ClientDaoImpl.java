@@ -20,6 +20,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Source;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import au.edu.anu.cecs.innerintel.Bean.Client;
@@ -56,7 +57,7 @@ public class ClientDaoImpl implements UserDao<Client> {
     public String showDiseaseHistory(Client user){return null;}
     public String showAllergies(Client user){return null;}
 
-    @Override
+
     public boolean addUser(Client usr) {
         String TAG = "add client";
         // Create a new user with a first and last name
@@ -87,7 +88,7 @@ public class ClientDaoImpl implements UserDao<Client> {
         return false;
     }
 
-    @Override
+
     public boolean deleteUser(Client usr) {
         String TAG = "delete client";
         db.collection("client").document(String.valueOf(usr.getCid()))
@@ -109,7 +110,7 @@ public class ClientDaoImpl implements UserDao<Client> {
         return false;
     }
 
-    @Override
+
     public boolean updateProfile(Client usr) {
         String TAG = "update Profile of client";
 
@@ -136,7 +137,7 @@ public class ClientDaoImpl implements UserDao<Client> {
         return false;
     }
 
-    @Override
+
     public Client searchUser(String msg) {
 
         String TAG = "search client";
@@ -159,6 +160,36 @@ public class ClientDaoImpl implements UserDao<Client> {
             }
         });
 
+        return null;
+    }
+
+    @Override
+    public void addUser(String key, Client user) {
+
+    }
+
+    @Override
+    public void deleteUser(String key, Client user) {
+
+    }
+
+    @Override
+    public void updateProfile(String key, Client user) {
+
+    }
+
+    @Override
+    public Client searchUserByID(String id) {
+        return null;
+    }
+
+    @Override
+    public List<Client> searchUserByName(String name) {
+        return null;
+    }
+
+    @Override
+    public List<Client> searchAll() {
         return null;
     }
 }

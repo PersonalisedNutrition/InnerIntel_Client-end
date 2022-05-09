@@ -1,13 +1,18 @@
 package au.edu.anu.cecs.innerintel.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,10 +44,10 @@ public class LogPageActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.logpage_viewPager);
         viewPager.setAdapter(viewPageAdapter);
         RadioGroup radioGroup = findViewById(R.id.logpage_rg_title);
-        RadioButton meals=findViewById(R.id.logpage_rb_maels);
-        RadioButton symptom=findViewById(R.id.logpage_rb_symptom);
-        RadioButton doody=findViewById(R.id.logpage_rb_doody);
-        RadioButton feeling=findViewById(R.id.logpage_rb_feelings);
+        RadioButton meals = findViewById(R.id.logpage_rb_maels);
+        RadioButton symptom = findViewById(R.id.logpage_rb_symptom);
+        RadioButton doody = findViewById(R.id.logpage_rb_doody);
+        RadioButton feeling = findViewById(R.id.logpage_rb_feelings);
         meals.setTextColor(getResources().getColor(R.color.mainColor));
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -79,5 +84,33 @@ public class LogPageActivity extends AppCompatActivity {
                 }
             }
         });
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            switch (item.getItemId()) {
+                case R.id.navigation_homepage:
+                    Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_logs:
+                    Intent intent1= new Intent(getApplicationContext(), LogPageActivity.class);
+                    startActivity(intent1);
+                    return true;
+            }
+            return false;
+        }
+    };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
+

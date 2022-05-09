@@ -1,13 +1,18 @@
 package au.edu.anu.cecs.innerintel.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,5 +61,33 @@ public class HomepageActivity extends AppCompatActivity {
                 }
             }
         });
+        BottomNavigationView bottomNavigationView=findViewById(R.id.navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+            switch (item.getItemId()) {
+                case R.id.navigation_homepage:
+                    Intent intent = new Intent(getApplicationContext(), HomepageActivity.class);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_logs:
+                    Intent intent1= new Intent(getApplicationContext(), LogPageActivity.class);
+
+                    startActivity(intent1);
+                    return true;
+            }
+            return false;
+        }
+    };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 }

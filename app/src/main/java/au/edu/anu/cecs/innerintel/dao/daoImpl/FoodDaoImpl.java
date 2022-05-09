@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import androidx.appcompat.app.AppCompatActivity;
 import au.edu.anu.cecs.innerintel.Bean.Food;
@@ -21,6 +22,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -116,7 +118,7 @@ public class FoodDaoImpl implements FoodDao {
     public List<Food> searchByName(String foodName) throws SQLException {
         foodList = new ArrayList<>();
         db.collection("Food")
-                .whereEqualTo("foodName", foodName)
+                .whereArrayContains("foodName", foodName)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -138,7 +140,7 @@ public class FoodDaoImpl implements FoodDao {
     public List<Food> searchByType(String foodType) throws SQLException {
         foodList = new ArrayList<>();
         db.collection("Food")
-                .whereEqualTo("foodType", foodType)
+                .whereArrayContains("foodType", foodType)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

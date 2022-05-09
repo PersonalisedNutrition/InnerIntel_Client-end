@@ -1,5 +1,9 @@
 package au.edu.anu.cecs.innerintel.dao;
 
+import java.util.List;
+
+import au.edu.anu.cecs.innerintel.Bean.Food;
+
 /**
  * Basic database operations of all users.
  * @author XinyueHu
@@ -7,15 +11,20 @@ package au.edu.anu.cecs.innerintel.dao;
 public interface UserDao<T> {
 
     // Add a user
-    boolean addUser(T user);
+    void addUser(String key, T user);
 
     // Delete a user
-    boolean deleteUser(T user);
+    void deleteUser(String key, T user);
 
     // Update profile information
-    boolean updateProfile(T user);
+    void updateProfile(String key, T user);
 
-    // Search a user by id, name or role
-    T searchUser(String msg);
+    // Search a user by id
+    T searchUserByID(String id);
+
+    // Search a user by name
+    List<T> searchUserByName(String name);
+
+    List<T> searchAll();
 
 }

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MessageActivity">
+
+    <TextView
+        android:id="@+id/message_tv_head"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/mainColor"
+        android:textColor="#FFFBFB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/message_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Message"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/title_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message_tv_head">
+
+        <com.rishabhharit.roundedimageview.RoundedImageView
+            android:id="@+id/message_iv_headphone1"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/pic_nutritionist" />
+
+        <TextView
+            android:id="@+id/message_tv_name1"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="N_Name"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/message_btn_change1"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Change" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2">
+
+        <com.rishabhharit.roundedimageview.RoundedImageView
+            android:id="@+id/message_iv_headphone2"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/pic_nutritionist" />
+
+        <TextView
+            android:id="@+id/message_tv_name2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="N_Name"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/message_btn_change2"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Change" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow">
+
+        <com.rishabhharit.roundedimageview.RoundedImageView
+            android:id="@+id/message_iv_headphone3"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/pic_nutritionist" />
+
+        <TextView
+            android:id="@+id/message_tv_name3"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="N_Name"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/message_btn_change3"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Change" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/message_tv_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="NOTE: \nYou can chat with 3 nutritionists at the same time.\n If you want to consult with other nutritionist,  \nplease click 'change'."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message_btn_selectnutritionist" />
+
+    <Button
+        android:id="@+id/message_btn_selectnutritionist"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/mainColor"
+        android:text="Select Nutritionist"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/btn_tv_font_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

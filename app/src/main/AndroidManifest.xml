@@ -22,7 +22,7 @@
             android:name=".activity.LogDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LogPageActivate"
+            android:name=".activity.HomepageActivity"
             android:exported="false" />
         <activity
             android:name=".activity.AddLogActivity"
@@ -31,7 +31,7 @@
             android:name=".activity.AddMealActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomepageActivity"
+            android:name=".activity.LogPageActivate"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

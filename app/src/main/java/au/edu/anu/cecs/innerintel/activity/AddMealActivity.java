@@ -44,7 +44,7 @@ public class AddMealActivity extends AppCompatActivity {
         setContentView(R.layout.activity_addmeal);
 
 //        loginUser = (User) getIntent().getExtras().getSerializable("user");
-       // logType = (LogType) getIntent().getExtras().getSerializable("logtype");
+//        logType = (LogType) getIntent().getExtras().getSerializable("logtype");
 
         calendar = Calendar.getInstance();
 

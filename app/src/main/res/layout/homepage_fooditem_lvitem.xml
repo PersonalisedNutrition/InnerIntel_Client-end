@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/homepage_tv_content"
         android:layout_width="287dp"
-        android:layout_height="58dp"
+        android:layout_height="35dp"
         android:layout_marginStart="@dimen/left_right_margin"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/left_right_margin"

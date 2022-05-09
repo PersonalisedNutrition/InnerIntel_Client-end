@@ -7,15 +7,15 @@
 
     <EditText
         android:id="@+id/homepage_et_search"
-        android:layout_width="292dp"
+        android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
-        android:layout_marginStart="@dimen/left_right_margin"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="@dimen/left_right_margin"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
         android:ems="10"
+        android:hint="Search"
         android:inputType="textPersonName"
-        android:text="Search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +24,7 @@
         android:id="@+id/homepage_lv_food"
         android:layout_width="327dp"
         android:layout_height="438dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homepage_et_search" />

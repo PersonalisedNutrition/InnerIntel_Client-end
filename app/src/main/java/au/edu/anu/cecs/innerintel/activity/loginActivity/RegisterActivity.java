@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -32,12 +33,16 @@ import au.edu.anu.cecs.innerintel.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    boolean testMode = true;
+
+    public static final String TAG = "Sign up with EmailPassword";
+
     private FirebaseAuth mAuth;
 
     EditText userName, email, password, passwordRetype;
-    ImageView userImage;
+
     Button btSignUp;
-    Uri imageUri;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,103 +52,68 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        initView();
+
+        btSignUp.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("LongLogTag")
+            @Override
+            public void onClick(View view) {
+                if (testMode){
+                    Intent i = new Intent(getApplicationContext(),QuestionnaireActivity.class);
+                    startActivity(i);
+
+                }else{
+                    if (password.getText().toString()==passwordRetype.getText().toString()){
+                        createAccount(email.getText().toString(),password.getText().toString());
+                        Log.d(TAG,"Successful creation. Please return to login");
+                    }else{
+                        Toast.makeText(getApplicationContext(),"The entered passwords are inconsistent",Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     *init views
+     */
+    private void initView(){
         userName = findViewById(R.id.userName);
         email = findViewById(R.id.userEmail);
         password = findViewById(R.id.userPassword);
         passwordRetype = findViewById(R.id.password_retype);
-        userImage = findViewById(R.id.userImage);
         btSignUp = findViewById(R.id.signup);
-
-        //check whether the user has already signed up
-        onStart();
-
-
-
-        btSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                signUp();
-
-            }
-        });
-
-        userImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                upLoad();
-
-            }
-        });
-
-
-
-
     }
 
     /**
-     * check whether the user has already signed up
+     * define the method to sign up with emails
+     * @param email email to sign up with
+     * @param password password to sign up with
      */
-    @Override
-    public void onStart() {
-        super.onStart();
-        try {
-            mAuth = FirebaseAuth.getInstance();
-            // Check if user is signed in (non-null) and update UI accordingly.
-            FirebaseUser currentUser = mAuth.getCurrentUser();
-        }catch (Exception e){
-            Log.e("Unity", "mAuth为nil \n" + e.getMessage());
-        }
-    }
+    private void createAccount(String email, String password) {
 
-
-
-    /**
-     * Opens the photo album  when the user clicks on the picture.
-     */
-    private void upLoad() {
-
-        Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
-        startActivityForResult(intent, 10);
-
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 10 && resultCode == RESULT_OK) {
-            userImage.setImageURI(data.getData());
-            imageUri = data.getData();
-        }
-
-    }
-
-
-    /**
-     * method for user to sign up
-     */
-    private void signUp(){
-
-        mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @SuppressLint("LongLogTag")
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "createUserWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
 
 
-                        // ...
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+
+
+                        }
                     }
                 });
 
-
-
-
-
-
-
-
-
-
     }
+
 }

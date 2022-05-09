@@ -12,6 +12,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
+import java.util.List;
+
 import au.edu.anu.cecs.innerintel.Bean.User;
 import au.edu.anu.cecs.innerintel.dao.UserDao;
 
@@ -38,12 +40,12 @@ public class UserDaoImpl implements UserDao<User> {
     }
 
 
-    @Override
+
     public boolean addUser(User user) {
         return false;
     }
 
-    @Override
+
     public boolean deleteUser(User usr) {
         String TAG = "deleteUser";
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -61,7 +63,7 @@ public class UserDaoImpl implements UserDao<User> {
         return true;
     }
 
-    @Override
+
     public boolean updateProfile(User usr) {
         String TAG = "updateProfile";
 
@@ -84,10 +86,39 @@ public class UserDaoImpl implements UserDao<User> {
         return true;
     }
 
-    @Override
+
     public User searchUser(String msg) {
 
         return null;
     }
 
+    @Override
+    public void addUser(String key, User user) {
+
+    }
+
+    @Override
+    public void deleteUser(String key, User user) {
+
+    }
+
+    @Override
+    public void updateProfile(String key, User user) {
+
+    }
+
+    @Override
+    public User searchUserByID(String id) {
+        return null;
+    }
+
+    @Override
+    public List<User> searchUserByName(String name) {
+        return null;
+    }
+
+    @Override
+    public List<User> searchAll() {
+        return null;
+    }
 }

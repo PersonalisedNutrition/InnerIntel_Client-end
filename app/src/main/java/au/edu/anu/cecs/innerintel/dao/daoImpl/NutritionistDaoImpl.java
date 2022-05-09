@@ -16,6 +16,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Source;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import au.edu.anu.cecs.innerintel.Bean.Log;
@@ -44,7 +45,7 @@ public class NutritionistDaoImpl implements UserDao<Nutritionist> {
 
     public Log readReport(){return null;}
 
-    @Override
+
     public boolean addUser(Nutritionist usr) {
 
         String TAG = "add nutritionist";
@@ -76,7 +77,7 @@ public class NutritionistDaoImpl implements UserDao<Nutritionist> {
         return false;
     }
 
-    @Override
+
     public boolean deleteUser(Nutritionist usr) {
         String TAG = "delete nutritionist";
         db.collection("nutritionist").document(String.valueOf(usr.getNid()))
@@ -98,7 +99,7 @@ public class NutritionistDaoImpl implements UserDao<Nutritionist> {
         return false;
     }
 
-    @Override
+
     public boolean updateProfile(Nutritionist usr) {
         String TAG = "update Profile of nutritionist";
 
@@ -125,7 +126,7 @@ public class NutritionistDaoImpl implements UserDao<Nutritionist> {
         return false;
     }
 
-    @Override
+
     public Nutritionist searchUser(String msg) {
 
         String TAG = "search nutritionist";
@@ -147,6 +148,36 @@ public class NutritionistDaoImpl implements UserDao<Nutritionist> {
                 }
             }
         });
+        return null;
+    }
+
+    @Override
+    public void addUser(String key, Nutritionist user) {
+
+    }
+
+    @Override
+    public void deleteUser(String key, Nutritionist user) {
+
+    }
+
+    @Override
+    public void updateProfile(String key, Nutritionist user) {
+
+    }
+
+    @Override
+    public Nutritionist searchUserByID(String id) {
+        return null;
+    }
+
+    @Override
+    public List<Nutritionist> searchUserByName(String name) {
+        return null;
+    }
+
+    @Override
+    public List<Nutritionist> searchAll() {
         return null;
     }
 }

@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LogPageActivate">
+    tools:context=".activity.LogPageActivity">
 
     <TextView
         android:id="@+id/logpage_tv_head2"
         android:layout_width="413dp"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/title_height"
         android:background="@color/mainColor"
         android:gravity="bottom"
-        android:text="Logs"
         android:textAlignment="center"
         android:textColor="#FFFBFB"
-        android:textSize="30sp"
+        android:textSize="@dimen/title_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,13 +22,14 @@
 
     <EditText
         android:id="@+id/logpage_et_search"
-        android:layout_width="290dp"
+        android:layout_width="320dp"
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:gravity="center"
+        android:hint="Search"
         android:inputType="textPersonName"
-        android:text="Search"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logpage_tv_head2" />
@@ -37,9 +37,9 @@
 
     <RadioGroup
         android:id="@+id/logpage_rg_title"
-        android:layout_width="413dp"
+        android:layout_width="380dp"
         android:layout_height="48dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
 
         <RadioButton
             android:id="@+id/logpage_rb_maels"
-            android:layout_width="0dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
@@ -60,7 +60,7 @@
 
         <RadioButton
             android:id="@+id/logpage_rb_symptom"
-            android:layout_width="0dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
@@ -72,7 +72,7 @@
 
         <RadioButton
             android:id="@+id/logpage_rb_doody"
-            android:layout_width="0dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
@@ -84,7 +84,7 @@
 
         <RadioButton
             android:id="@+id/logpage_rb_feelings"
-            android:layout_width="0dp"
+            android:layout_width="320dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="?android:attr/selectableItemBackground"
@@ -99,12 +99,24 @@
         android:id="@+id/logpage_viewPager"
         android:layout_width="352dp"
         android:layout_height="418dp"
-        android:layout_marginStart="@dimen/left_right_margin"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="@dimen/left_right_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logpage_rg_title" />
+
+    <TextView
+        android:id="@+id/logpage_tv_head3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Logs"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/title_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/logpage_tv_head2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

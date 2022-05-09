@@ -8,13 +8,15 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import java.util.List;
 
 /**
- * @author Tianqi Tang
+ * Add food page adapter
+ *
+ * @author Shuyi Chen
  */
-public class HomepageViewPagerAdapter extends FragmentPagerAdapter {
+public class AddFoodFoodItemsViewPageAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragments;
 
-    public HomepageViewPagerAdapter(FragmentManager manager, List<Fragment> fragments) {
+    public AddFoodFoodItemsViewPageAdapter(FragmentManager manager, List<Fragment> fragments) {
         super(manager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.fragments = fragments;
     }

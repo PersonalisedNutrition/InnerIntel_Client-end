@@ -28,14 +28,14 @@
         android:layout_marginTop="16dp"
         android:background="@color/white"
         android:gravity="center"
-        android:text="XX-XX"
+        android:hint="Click to choose time"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_date" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/addmeal_tv_title"
         android:layout_width="149dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
@@ -56,7 +56,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/pic_takephoto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_title" />
 
     <Button
         android:id="@+id/addmeal_btn_takephoto2"
@@ -68,7 +68,7 @@
         android:background="@drawable/pic_takephoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addmeal_btn_takephoto1"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_title" />
 
     <TextView
         android:id="@+id/addmeal_tv_date"
@@ -78,7 +78,7 @@
         android:layout_marginTop="16dp"
         android:background="@color/white"
         android:gravity="center"
-        android:text="XX-XX-XXXX"
+        android:hint="Click to choose date"
         android:textAlignment="center"
         android:textSize="@dimen/btn_tv_font_size"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +117,7 @@
         android:layout_marginStart="@dimen/left_right_margin"
         android:layout_marginTop="16dp"
         android:background="@color/white"
-        android:text="Apple,100,g,raw; \n Milk, 50, ml, raw;"
+        android:hint="Apple,100,g,raw; \n Milk, 50, ml, raw;"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"

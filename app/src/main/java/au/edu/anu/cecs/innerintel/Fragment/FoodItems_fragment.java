@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -25,7 +24,7 @@ import au.edu.anu.cecs.innerintel.R;
 /**
  * @author Tianqi Tang
  */
-public class Homepage_fooditems_fragment extends Fragment {
+public class FoodItems_fragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,7 +35,7 @@ public class Homepage_fooditems_fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Homepage_fooditems_fragment() {
+    public FoodItems_fragment() {
         // Required empty public constructor
     }
 
@@ -49,8 +48,8 @@ public class Homepage_fooditems_fragment extends Fragment {
      * @return A new instance of fragment BlankFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Homepage_fooditems_fragment newInstance(String param1, String param2) {
-        Homepage_fooditems_fragment fragment = new Homepage_fooditems_fragment();
+    public static FoodItems_fragment newInstance(String param1, String param2) {
+        FoodItems_fragment fragment = new FoodItems_fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -78,7 +77,7 @@ public class Homepage_fooditems_fragment extends Fragment {
                              @NonNull Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (root == null) {
-            root = inflater.inflate(R.layout.fragment_homepage_fooditems_fragment, container, false);
+            root = inflater.inflate(R.layout.fragment_homepage_fooditems, container, false);
         }
         initView();
         return root;

@@ -12,7 +12,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Breakfast"
+        android:text="Detail"
         android:textAlignment="center"
         android:textColor="@color/mainColor"
         android:textSize="@dimen/title_font_size"
@@ -21,56 +21,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/logdetail_bt_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/white"
+        android:id="@+id/logdetail_btn_edit"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/mainColor"
         android:text="EDIT"
-        android:textColor="@color/mainColor"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_tv_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logdetail_tv_title" />
+        app:layout_constraintTop_toBottomOf="@+id/logdetail_lv_food" />
 
     <Button
-        android:id="@+id/logdetail_bt_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="@dimen/left_right_margin"
-        android:backgroundTint="@color/white"
+        android:id="@+id/logdetail_btn_delete"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/mainColor"
         android:text="DELETE"
-        android:textColor="@color/mainColor"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_tv_font_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintStart_toEndOf="@+id/logdetail_bt_edit"
-        app:layout_constraintTop_toBottomOf="@+id/logdetail_tv_title" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logdetail_btn_edit" />
 
     <ListView
         android:id="@+id/logdetail_lv_food"
-        android:layout_width="329dp"
-        android:layout_height="254dp"
+        android:layout_width="345dp"
+        android:layout_height="300dp"
         android:layout_marginStart="@dimen/left_right_margin"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="@dimen/left_right_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logdetail_bt_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/logdetail_im_image" />
 
     <ImageView
         android:id="@+id/logdetail_im_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_width="345dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logdetail_lv_food"
+        app:layout_constraintTop_toBottomOf="@+id/logdetail_tv_title"
         app:srcCompat="@drawable/pic_food_detail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

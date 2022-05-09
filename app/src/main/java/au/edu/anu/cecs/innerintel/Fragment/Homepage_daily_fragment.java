@@ -75,7 +75,7 @@ public class Homepage_daily_fragment extends Fragment {
                              @NonNull Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (root == null) {
-            root = inflater.inflate(R.layout.fragment_homepage_daily_fragment, container, false);
+            root = inflater.inflate(R.layout.fragment_homepage_daily, container, false);
         }
         initView();
         return root;

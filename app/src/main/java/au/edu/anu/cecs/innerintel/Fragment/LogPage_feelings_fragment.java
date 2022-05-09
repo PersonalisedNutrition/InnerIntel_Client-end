@@ -69,7 +69,7 @@ public class LogPage_feelings_fragment extends Fragment {
                              @NonNull Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (root == null) {
-            root = inflater.inflate(R.layout.fragment_log_page_feelings_fragment, container, false);
+            root = inflater.inflate(R.layout.fragment_log_page_feelings, container, false);
         }
         initView();
         return root;

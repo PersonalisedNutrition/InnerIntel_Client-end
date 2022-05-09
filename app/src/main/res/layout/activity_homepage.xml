@@ -9,16 +9,28 @@
 
     <TextView
         android:id="@+id/homepage_tv_head"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/title_height"
         android:background="@color/mainColor"
         android:gravity="bottom"
-        android:text="Main"
         android:textAlignment="center"
         android:textColor="#FFFBFB"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homepage_tv_head2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Main"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/title_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/logpage_tv_head2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,11 +70,9 @@
     </RadioGroup>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/homepage_viewPager"
-        android:layout_width="409dp"
+        android:id="@+id/addfood_viewPager"
+        android:layout_width="0dp"
         android:layout_height="509dp"
-        android:layout_marginStart="@dimen/left_right_margin"
-        android:layout_marginEnd="@dimen/left_right_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homepage_rg" />

@@ -12,9 +12,9 @@ import android.widget.RadioGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import au.edu.anu.cecs.innerintel.Adapter.HomepageViewPagerAdapter;
+import au.edu.anu.cecs.innerintel.Adapter.HomePageFoodItemsViewPageAdapter;
 import au.edu.anu.cecs.innerintel.Fragment.Homepage_daily_fragment;
-import au.edu.anu.cecs.innerintel.Fragment.Homepage_fooditems_fragment;
+import au.edu.anu.cecs.innerintel.Fragment.FoodItems_fragment;
 import au.edu.anu.cecs.innerintel.R;
 
 
@@ -30,10 +30,10 @@ public class HomepageActivity extends AppCompatActivity {
         this.setContentView(R.layout.activity_homepage);
 
         fragmentList.add(new Homepage_daily_fragment());
-        fragmentList.add(new Homepage_fooditems_fragment());
+        fragmentList.add(new FoodItems_fragment());
 
-        HomepageViewPagerAdapter viewPagerAdapter = new HomepageViewPagerAdapter(getSupportFragmentManager(), fragmentList);
-        ViewPager viewPager = findViewById(R.id.homepage_viewPager);
+        HomePageFoodItemsViewPageAdapter viewPagerAdapter = new HomePageFoodItemsViewPageAdapter(getSupportFragmentManager(), fragmentList);
+        ViewPager viewPager = findViewById(R.id.addfood_viewPager);
         viewPager.setAdapter(viewPagerAdapter);
         RadioGroup radioGroup = findViewById(R.id.homepage_rg);
         RadioButton daily=findViewById(R.id.homepage_rb_daily);

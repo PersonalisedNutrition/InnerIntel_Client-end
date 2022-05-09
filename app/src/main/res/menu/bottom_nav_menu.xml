@@ -4,19 +4,19 @@
 
     <item
         android:id="@+id/navigation_homepage"
-        android:icon="@android:drawable/ic_lock_idle_alarm"
+        android:icon="@android:drawable/ic_menu_my_calendar"
         android:title=""
         app:showAsAction="always" />
 
     <item
         android:id="@+id/navigation_logs"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@android:drawable/ic_menu_today"
         android:title=""
         app:showAsAction="always" />
 
     <item
         android:id="@+id/navigation_add"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@android:drawable/ic_menu_add"
         android:title=""
         app:showAsAction="always" />
     <item

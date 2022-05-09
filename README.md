@@ -64,7 +64,7 @@ Inner Intel mainly serves two groups of users:
 
 | Name        | title                      | Email               |
 | ----------- | -------------------------- | ------------------- |
-| Yuhao Zhai  | Spokesperson, Scrum Master | u7152566@anu.edu.au |
+| Yuhao Zhai  | Spokesperson               | u7152566@anu.edu.au |
 | Shuyi Chen  | Spokesperson               | u7175274@anu.edu.au |
 | Tianqi Tang | Techinical Lead            | u7192230@anu.edu.au |
 | Shiyun Zhu  | ALGO Manager               | u7041419@anu.edu.au |

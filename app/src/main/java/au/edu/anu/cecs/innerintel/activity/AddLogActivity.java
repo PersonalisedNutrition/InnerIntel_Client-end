@@ -67,7 +67,9 @@ public class AddLogActivity extends AppCompatActivity {
                     intent= new Intent(getApplicationContext(), MessageActivity.class);
                     startActivity(intent);
                     return true;
-
+                case R.id.navigation_me:
+                    intent= new Intent(getApplicationContext(), MePageActivity.class);
+                    startActivity(intent);
             }
             return false;
         }

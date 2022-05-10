@@ -39,6 +39,8 @@
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true" />
+        <activity android:name=".activity.MessageActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.loginActivity.SignUpNoteActivity"
             android:exported="true"
@@ -51,9 +53,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.LogPageActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.MessageActivity"
             android:exported="true" />
         <activity
             android:name=".activity.AddLogActivity"

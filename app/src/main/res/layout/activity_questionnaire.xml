@@ -12,7 +12,7 @@
         android:layout_height="69dp"
         android:layout_marginTop="70dp"
         android:gravity="center"
-        android:text="customization"
+        android:text="Customization"
         android:textColor="@color/mainColor"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,12 +52,13 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="260dp"
-        android:layout_height="104dp"
+        android:layout_width="259dp"
+        android:layout_height="145dp"
         android:layout_marginTop="50dp"
 
+        android:text="For better customization, we provide a few questions to help us know more about your body, which may take about five minutes."
+        android:textAlignment="center"
         android:textSize="20dp"
-        android:text="For better customization, we will ask you a few questions, which may take about five minutes."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

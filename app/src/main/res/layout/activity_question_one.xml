@@ -74,6 +74,6 @@
         android:layout_width="463dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/login_main2" />
+        app:srcCompat="@drawable/pic_login_main2" />
 
 </LinearLayout>

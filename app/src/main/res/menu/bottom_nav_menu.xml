@@ -4,29 +4,29 @@
 
     <item
         android:id="@+id/navigation_homepage"
-        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:icon="@drawable/pic_home"
         android:title=""
         app:showAsAction="always" />
 
     <item
         android:id="@+id/navigation_logs"
-        android:icon="@android:drawable/ic_menu_today"
+        android:icon="@drawable/pic_log"
         android:title=""
         app:showAsAction="always" />
 
     <item
         android:id="@+id/navigation_add"
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@drawable/pic_addlog"
         android:title=""
         app:showAsAction="always" />
     <item
         android:id="@+id/navigation_message"
-        android:icon="@android:drawable/ic_menu_call"
+        android:icon="@drawable/pic_nutriteam"
         android:title=""
         app:showAsAction="always" />
     <item
         android:id="@+id/navigation_me"
-        android:icon="@android:drawable/ic_menu_myplaces"
+        android:icon="@drawable/pic_me"
         android:title=""
         app:showAsAction="always" />
 

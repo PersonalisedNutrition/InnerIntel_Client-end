@@ -37,9 +37,7 @@
             android:name=".activity.loginActivity.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".activity.SplashActivity"
-            android:exported="true" />
-        <activity android:name=".activity.MessageActivity"
+            android:name=".activity.HomepageActivity"
             android:exported="true" />
         <activity
             android:name=".activity.loginActivity.SignUpNoteActivity"
@@ -55,22 +53,26 @@
             android:name=".activity.LogPageActivity"
             android:exported="true" />
         <activity
+            android:name=".activity.MessageActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.AddLogActivity"
             android:exported="false" />
         <activity
             android:name=".activity.AddMealActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomepageActivity"
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- <activity -->
-        <!-- android:name=".activity.AddlogActivity" -->
-        <!-- android:exported="false" /> -->
+        </activity>
+        <activity
+            android:name=".activity.AddFoodActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.loginActivity.RegisterActivity"
             android:exported="true"

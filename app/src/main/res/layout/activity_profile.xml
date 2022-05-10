@@ -26,7 +26,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="70dp"
-        android:src="@drawable/userimage"
+        android:src="@drawable/pic_userimage"
 
         tools:ignore="MissingConstraints" />
 
@@ -46,7 +46,7 @@
         android:layout_width="463dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
-        app:srcCompat="@drawable/login_main2" />
+        app:srcCompat="@drawable/pic_login_main2" />
 
 
 

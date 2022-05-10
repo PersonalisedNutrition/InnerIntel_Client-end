@@ -7,10 +7,29 @@
     tools:context=".activity.MePageActivity">
 
 
+    <TextView
+        android:id="@+id/me_tv_head"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/mainColor"
+        android:textColor="#FFFBFB"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
+    <TextView
+        android:id="@+id/me_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Me"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/title_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
@@ -30,10 +49,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="464dp"
-        android:text="Edit personal information"
         android:background="@color/mainColor"
-        android:textSize="20sp"
+        android:text="Edit personal information"
         android:textColor="#FFFBFB"
+        android:textSize="@dimen/btn_tv_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,10 +63,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:text="settings"
         android:background="@color/mainColor"
-        android:textSize="20sp"
+        android:text="settings"
         android:textColor="#FFFBFB"
+        android:textSize="@dimen/btn_tv_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,19 +90,6 @@
         android:layout_marginEnd="48dp"
         android:src="@drawable/pic_headphoto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/meTextView"
-        android:layout_width="403dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="24dp"
-        android:text="Me"
-        android:gravity="center"
-        android:textSize="45dp"
-        android:textColor="@color/mainColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 

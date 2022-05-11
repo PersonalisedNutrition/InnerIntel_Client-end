@@ -138,6 +138,21 @@
         app:layout_constraintTop_toBottomOf="@+id/addmeal_spi_mealtype" />
 
     <Button
+        android:id="@+id/addmeal_btn_addfood2"
+        android:layout_width="90dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@color/mainColor"
+        android:text="Load Meal"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/addmeal_tv_foods"
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_btn_addfood" />
+
+    <Button
         android:id="@+id/addmeal_btn_addmeal"
         android:layout_width="315dp"
         android:layout_height="41dp"

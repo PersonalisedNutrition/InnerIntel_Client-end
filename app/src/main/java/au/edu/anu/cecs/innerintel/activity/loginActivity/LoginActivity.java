@@ -150,7 +150,7 @@ public class LoginActivity extends AppCompatActivity
 
     private void login () {
 
-        Toast.makeText(getApplicationContext(), "Successful Login", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_LONG).show();
         Intent i = new Intent(LoginActivity.this, HomepageActivity.class);
         i.putExtra("userForTest", (Serializable) client);
         startActivity(i);

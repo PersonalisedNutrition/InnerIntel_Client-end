@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/addmeal_btn_time"
-        android:layout_width="90dp"
+        android:layout_width="95dp"
         android:layout_height="35dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="@dimen/left_right_margin"
+        android:layout_marginEnd="50dp"
         android:background="@color/mainColor"
         android:text="Time"
         android:textColor="@color/white"
@@ -67,6 +67,7 @@
         android:layout_marginEnd="@dimen/left_right_margin"
         android:background="@drawable/pic_takephoto"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/addmeal_btn_takephoto1"
         app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_title" />
 
@@ -86,11 +87,11 @@
 
     <Button
         android:id="@+id/addmeal_btn_date"
-        android:layout_width="90dp"
+        android:layout_width="95dp"
         android:layout_height="35dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="@dimen/left_right_margin"
+        android:layout_marginEnd="50dp"
         android:background="@color/mainColor"
         android:text="Date"
         android:textColor="@color/white"
@@ -125,7 +126,7 @@
 
     <Button
         android:id="@+id/addmeal_btn_addfood"
-        android:layout_width="90dp"
+        android:layout_width="95dp"
         android:layout_height="39dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
@@ -138,14 +139,14 @@
         app:layout_constraintTop_toBottomOf="@+id/addmeal_spi_mealtype" />
 
     <Button
-        android:id="@+id/addmeal_btn_addfood2"
-        android:layout_width="90dp"
+        android:id="@+id/addmeal_btn_loadrecipe"
+        android:layout_width="95dp"
         android:layout_height="39dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="@dimen/left_right_margin"
         android:background="@color/mainColor"
-        android:text="Load Meal"
+        android:text="Load Recipe"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
@@ -153,16 +154,32 @@
         app:layout_constraintTop_toBottomOf="@+id/addmeal_btn_addfood" />
 
     <Button
+        android:id="@+id/addmeal_btn_addrecipe"
+        android:layout_width="95dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/left_right_margin"
+        android:background="@color/mainColor"
+        android:text="Add Recipe"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toEndOf="@+id/addmeal_tv_foods"
+        app:layout_constraintTop_toBottomOf="@+id/addmeal_btn_loadrecipe" />
+
+    <Button
         android:id="@+id/addmeal_btn_addmeal"
-        android:layout_width="315dp"
+        android:layout_width="320dp"
         android:layout_height="41dp"
         android:layout_marginStart="@dimen/left_right_margin"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="@dimen/left_right_margin"
         android:background="@color/mainColor"
         android:text="Add Meal"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addmeal_tv_foods" />
 </androidx.constraintlayout.widget.ConstraintLayout>

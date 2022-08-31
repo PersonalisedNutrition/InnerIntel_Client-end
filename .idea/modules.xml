@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/InnerIntel.iml" filepath="$PROJECT_DIR$/.idea/modules/InnerIntel.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InnerIntel.app.unitTest.iml" />
     </modules>
   </component>
 </project>

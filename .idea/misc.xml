@@ -4,6 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ANU_course/Semester_3/COMP8715/Code/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_addfood.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_addlog.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_homepage.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_log_page.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_login.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_register.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_sign_up_note.xml" value="0.22418478260869565" />
         <entry key="app/src/main/res/layout/activity_addfood.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/activity_addlog.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_addmeal.xml" value="0.375" />

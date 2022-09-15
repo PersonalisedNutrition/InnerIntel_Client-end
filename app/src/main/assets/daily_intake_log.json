@@ -1,0 +1,148 @@
+{
+"daily_intake_log":[
+{
+"daily_intake_id":"1",
+"lid":"1",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/27 09:10:00",
+"duration":"15min",
+"food_items":"Bread,100g,BAKED; Juice,250ml,NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"2",
+"lid":"2",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/27 09:10:00",
+"duration":"15min",
+"food_items":"Bread,100g,BAKED; Juice,250ml,NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"3",
+"lid":"7",
+"type":"LUNCH",
+"startTime":"2022\/8\/28 13:10:00",
+"duration":"10min",
+"food_items":"Cabbege,150g,PAN_FRIED;Chicken,100g,PAN_FRIED;",
+"food_photo":null
+},
+{
+"daily_intake_id":"4",
+"lid":"8",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/28 08:10:00",
+"duration":"10min",
+"food_items":"Cake,100g,BAKED; Yogurt,138g,NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"5",
+"lid":"9",
+"type":"DINNER",
+"startTime":"2022\/8\/28 21:00:00",
+"duration":"30min",
+"food_items":"Beef,150g,BOILED;Chicken wing,150g;Rice,100g,NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"6",
+"lid":"10",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/29 20:00:00",
+"duration":"10min",
+"food_items":"Milk, 300g, COLD; Bread, 100g,NULL;  Sliced ham,50g, NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"7",
+"lid":"11",
+"type":"LUNCH",
+"startTime":"2022\/8\/28 13:00:00",
+"duration":"20min",
+"food_items":"Malatang,500g,BOILED;",
+"food_photo":null
+},
+{
+"daily_intake_id":"8",
+"lid":"12",
+"type":"DINNER",
+"startTime":"2022\/8\/28 23:00:00",
+"duration":"20min",
+"food_items":"Porridge,300ml,BOILED;Enoki mushroom,50g,BOILED;",
+"food_photo":null
+},
+{
+"daily_intake_id":"9",
+"lid":"13",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/29 09:30:00",
+"duration":"15min",
+"food_items":"Coffee,500ml,NULL;Cookies,150g,BAKED;",
+"food_photo":null
+},
+{
+"daily_intake_id":"10",
+"lid":"14",
+"type":"DINNER",
+"startTime":"2022\/8\/29 18:30:00",
+"duration":"40min",
+"food_items":"Duck,100g,BAKED; noddle 150g BOILED;pork 50g FRIED;NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"11",
+"lid":"15",
+"type":"DINNER",
+"startTime":"2022\/8\/29 18:30:00",
+"duration":"40min",
+"food_items":"Duck,100g,BAKED; noddle 150g BOILED;pork 50g FRIED;NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"12",
+"lid":"16",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/29 12:30:00",
+"duration":"30min",
+"food_items":"Bread,100g,BAKED;chocolate milk 100ml;Sausage 50g BAKED;NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"13",
+"lid":"17",
+"type":"BREAKFAST",
+"startTime":"2022\/8\/29 12:30:00",
+"duration":"30min",
+"food_items":"Bread,100g,BAKED;coffee 100ml;Sausage 50g BAKED;NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"14",
+"lid":"18",
+"type":"DINNER",
+"startTime":"2022\/8\/28 18:30:00",
+"duration":"40min",
+"food_items":"Chicken legs,150g,FRIED;veges,100g,BOILED;Rice,75g,BOILED;NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"15",
+"lid":"19",
+"type":"DINNER",
+"startTime":"2022\/8\/28 18:30:00",
+"duration":"40min",
+"food_items":"Chicken legs,150g,FRIED;veges,100g,BOILED;Rice,75g,BOILED;NULL;",
+"food_photo":null
+},
+{
+"daily_intake_id":"16",
+"lid":"29",
+"type":"DINNER",
+"startTime":"2022\/9\/6 18:10:00",
+"duration":"20min",
+"food_items":"Pancake,100g,FIRED;",
+"food_photo":null
+}
+]
+}

@@ -1,0 +1,18 @@
+{
+"sleep_log":[
+{
+"sleep_id":"1",
+"lid":"27",
+"quality":"good",
+"start_time":"2022\/8\/29 22:30:00",
+"duration":"8"
+},
+{
+"sleep_id":"2",
+"lid":"28",
+"quality":"ordinary",
+"start_time":"2022\/8\/30 22:40:00",
+"duration":"7"
+}
+]
+}

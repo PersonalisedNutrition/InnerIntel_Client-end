@@ -1,0 +1,18 @@
+{
+"exercise_log":[
+{
+"exercise_id":"1",
+"lid":"4",
+"type":"swim",
+"start_time":"2022\/8\/28 16:10:00",
+"duration":"1h"
+},
+{
+"exercise_id":"2",
+"lid":"5",
+"type":"swim",
+"start_time":"2022\/8\/29 16:45:00",
+"duration":"1h"
+}
+]
+}

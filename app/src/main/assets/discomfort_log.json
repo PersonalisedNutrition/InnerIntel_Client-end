@@ -1,0 +1,25 @@
+{
+"discomfort_log":[
+{
+"discomfort_id":"1",
+"lid":"23",
+"frequency":"0",
+"degree":"Nil",
+"time":"2022\/8\/30 16:10:00"
+},
+{
+"discomfort_id":"2",
+"lid":"24",
+"frequency":"4",
+"degree":"medium",
+"time":"2022\/8\/30 16:10:00"
+},
+{
+"discomfort_id":null,
+"lid":null,
+"frequency":null,
+"degree":null,
+"time":null
+}
+]
+}

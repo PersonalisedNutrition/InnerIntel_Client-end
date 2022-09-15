@@ -1,0 +1,18 @@
+{
+"flatulence_log":[
+{
+"flatulence_id":"1",
+"lid":"21",
+"frequency":"2",
+"degree":"normal",
+"time":"2022\/8\/30 12:20:00"
+},
+{
+"flatulence_id":"2",
+"lid":"22",
+"frequency":"1",
+"degree":"nil",
+"time":"2022\/8\/31 23:20:00"
+}
+]
+}

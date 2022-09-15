@@ -82,9 +82,10 @@ public class Homepage_daily_fragment extends Fragment {
     }
     private SimpleAdapter adapter;
     private List<Map<String, Object>> lists;
-    private String[] theme = {"Calorie", "Water", "Suger"};
-    private String[] content = {"123", "123", "123"};
-    private String[] cal = {"KJ", "G", "T"};
+    private String[] theme = {"Calorie", "Water", "Protein","Fat","Sugar","Fe","Mg","Ca","K","VitaminA","VitaminB"
+    ,"VitaminC","VitaminD","VitaminE"};
+    private String[] content = {"1236", "800", "25.8","17.8","10","285","168","560","750","21.3","14.8","12.1","0.8","7.6"};
+    private String[] cal = {"KCal", "ml", "g","g","g","mg","mg","mg","mg","mg","mg","mg","mg","mg"};
     private int imageViews = R.drawable.pic_foodsummary;
     private Button generate;
     private void initView(){

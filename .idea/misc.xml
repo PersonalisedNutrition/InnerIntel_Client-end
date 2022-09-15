@@ -4,9 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ANU_course/Semester_3/COMP8715/Code/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_addfood.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_addlog.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_homepage.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_log_page.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_login.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_register.xml" value="0.22418478260869565" />
+        <entry key="..\:/Users/36090/AndroidStudioProjects/InnerIntel/app/src/main/res/layout/activity_sign_up_note.xml" value="0.22418478260869565" />
         <entry key="app/src/main/res/layout/activity_addfood.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/activity_addlog.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_addmeal.xml" value="0.3049906412760417" />
+        <entry key="app/src/main/res/layout/activity_addmeal.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_homepage.xml" value="0.3174118041992186" />
         <entry key="app/src/main/res/layout/activity_log_detail.xml" value="0.18958333333333333" />
         <entry key="app/src/main/res/layout/activity_log_page_activate.xml" value="0.3283514492753623" />
@@ -19,10 +26,13 @@
         <entry key="app/src/main/res/layout/activity_questionnaire.xml" value="0.26595458984375" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1812286376953125" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.159375" />
+        <entry key="app/src/main/res/layout/dialogedittext.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2427536231884058" />
         <entry key="app/src/main/res/layout/fragment_homepage.xml" value="0.3223586470992478" />
+        <entry key="app/src/main/res/layout/fragment_homepage_daily.xml" value="0.1590678824721378" />
         <entry key="app/src/main/res/layout/fragment_homepage_daily_fragment.xml" value="0.2191207885742188" />
+        <entry key="app/src/main/res/layout/fragment_homepage_fooditems.xml" value="0.1590678824721378" />
         <entry key="app/src/main/res/layout/fragment_homepage_fooditems_fragment.xml" value="0.3283514492753623" />
         <entry key="app/src/main/res/layout/fragment_log_page_meals_fragment.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/homepage_daily_item.xml" value="0.3076923076923077" />

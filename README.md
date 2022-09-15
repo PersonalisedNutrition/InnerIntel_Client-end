@@ -62,7 +62,7 @@ Inner Intel mainly serves two groups of users:
 
 ### 05_Group S.A.Y. Team Members:
 
-| Name        | title                      | Email               |
+| Name        | Title                      | Email               |
 | ----------- | -------------------------- | ------------------- |
 | Yuhao Zhai  | Spokesperson               | u7152566@anu.edu.au |
 | Shuyi Chen  | Spokesperson               | u7175274@anu.edu.au |

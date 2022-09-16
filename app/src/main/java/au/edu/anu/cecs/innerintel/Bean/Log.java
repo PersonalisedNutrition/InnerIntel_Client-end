@@ -8,11 +8,11 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.LogType;
  * @author Tianqi Tang
  */
 public class Log {
-    private final int logId; // can never edit, once create
-    private int tableId;
+    private final int lid; // can never edit, once create
+    private int table_id;
+    private LogType type;
     private int cid;
-    private LogType logType;
-    private String logTime;
+    private String time;
     private String feedback;
 //    private int logAuthority;
 
@@ -25,58 +25,6 @@ public class Log {
 //    }
 
 
-    public Log(int logId, int tableId, int cid, LogType logType, String logTime, String feedback) {
-        this.logId = logId;
-        this.tableId = tableId;
-        this.cid = cid;
-        this.logType = logType;
-        this.logTime = logTime;
-        this.feedback = feedback;
-    }
-
-    public int getLogId() {
-        return logId;
-    }
-
-    public int getTableId() {
-        return tableId;
-    }
-
-    public void setTableId(int tableId) {
-        this.tableId = tableId;
-    }
-
-    public int getCid() {
-        return cid;
-    }
-
-    public void setCid(int cid) {
-        this.cid = cid;
-    }
-
-    public LogType getLogType() {
-        return logType;
-    }
-
-    public void setLogType(LogType logType) {
-        this.logType = logType;
-    }
-
-    public String getLogTime() {
-        return logTime;
-    }
-
-    public void setLogTime(String logTime) {
-        this.logTime = logTime;
-    }
-
-    public String getFeedback() {
-        return feedback;
-    }
-
-    public void setFeedback(String feedback) {
-        this.feedback = feedback;
-    }
 
 
     //    public Log(int logId, int userID, LogType logType) {
@@ -87,7 +35,60 @@ public class Log {
 //        this.logAuthority = 1;
 //    }
 
-//    public void setLogType(LogType logType) {
+    public Log(int lid, int table_id, LogType type, int cid, String time, String feedback) {
+        this.lid = lid;
+        this.table_id = table_id;
+        this.type = type;
+        this.cid = cid;
+        this.time = time;
+        this.feedback = feedback;
+    }
+
+    public int getLid() {
+        return lid;
+    }
+
+    public int getTable_id() {
+        return table_id;
+    }
+
+    public void setTable_id(int table_id) {
+        this.table_id = table_id;
+    }
+
+    public LogType getType() {
+        return type;
+    }
+
+    public void setType(LogType type) {
+        this.type = type;
+    }
+
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getFeedback() {
+        return feedback;
+    }
+
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
+    }
+
+    //    public void setLogType(LogType logType) {
 //        this.logType = logType;
 //    }
 //

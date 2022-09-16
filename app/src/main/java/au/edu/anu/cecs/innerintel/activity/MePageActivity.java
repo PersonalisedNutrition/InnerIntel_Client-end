@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import au.edu.anu.cecs.innerintel.utils.InformationResources;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -32,12 +33,16 @@ public class MePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_page);
 
+        InformationResources info = new InformationResources();
+        info.ReadUploadLog(getApplicationContext());
+        info.ReadUploadSleepLog(getApplicationContext());
+
         addInfo();
         listView = findViewById(R.id.meListview);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,meInfo);
         listView.setAdapter(arrayAdapter);
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
-        bottomNavigationView.setLabelVisibilityMode(1);
+        //bottomNavigationView.setLabelVisibilityMode(1);
         bottomNavigationView.getMenu().getItem(4).setChecked(true);
         bottomNavigationView.setItemIconSize(115);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);

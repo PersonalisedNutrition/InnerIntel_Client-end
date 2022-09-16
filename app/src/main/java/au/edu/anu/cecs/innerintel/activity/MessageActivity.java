@@ -17,7 +17,7 @@ public class MessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
-    BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setLabelVisibilityMode(1);
         bottomNavigationView.getMenu().getItem(3).setChecked(true);
         bottomNavigationView.setItemIconSize(115);

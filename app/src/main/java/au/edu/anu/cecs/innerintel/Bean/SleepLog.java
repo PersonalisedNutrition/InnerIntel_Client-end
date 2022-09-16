@@ -3,13 +3,13 @@ package au.edu.anu.cecs.innerintel.Bean;
 
 
 public class SleepLog {
-    private int sleep_id;
-    private final int lid; // can never edit, once create || this will relate with log by logId
+    private String sleep_id;
+    private String lid; // can never edit, once create || this will relate with log by logId
     private String quality;
     private String start_time;
     private String duration;
 
-    public SleepLog(int sleep_id, int lid, String quality, String start_time, String duration) {
+    public SleepLog(String sleep_id, String lid, String quality, String start_time, String duration) {
         this.sleep_id = sleep_id;
         this.lid = lid;
         this.quality = quality;
@@ -17,15 +17,15 @@ public class SleepLog {
         this.duration = duration;
     }
 
-    public int getSleep_id() {
+    public String getSleep_id() {
         return sleep_id;
     }
 
-    public void setSleep_id(int sleep_id) {
+    public void setSleep_id(String sleep_id) {
         this.sleep_id = sleep_id;
     }
 
-    public int getLid() {
+    public String getLid() {
         return lid;
     }
 

@@ -18,9 +18,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerIntel">
+
         <activity
             android:name=".activity.MePageActivity"
-            android:exported="false" />
+            android:exported="true" />
+
         <activity
             android:name=".activity.loginActivity.QuestionThreeActivity"
             android:exported="true" />
@@ -81,6 +83,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name" />
+
     </application>
 
 </manifest>

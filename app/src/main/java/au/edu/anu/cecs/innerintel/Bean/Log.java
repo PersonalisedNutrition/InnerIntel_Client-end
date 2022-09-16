@@ -1,17 +1,15 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
-import au.edu.anu.cecs.innerintel.Bean.enumType.LogType;
-
 /**
  * two constructors : difference(contains logtime and logauthority or without them)
  * logId cannot be edit once create
  * @author Tianqi Tang
  */
 public class Log {
-    private final int lid; // can never edit, once create
-    private int table_id;
-    private LogType type;
-    private int cid;
+    private String lid; // can never edit, once create
+    private String table_id;
+    private String type;
+    private String cid;
     private String time;
     private String feedback;
 //    private int logAuthority;
@@ -35,7 +33,7 @@ public class Log {
 //        this.logAuthority = 1;
 //    }
 
-    public Log(int lid, int table_id, LogType type, int cid, String time, String feedback) {
+    public Log(String lid, String table_id, String type, String cid, String time, String feedback) {
         this.lid = lid;
         this.table_id = table_id;
         this.type = type;
@@ -44,31 +42,31 @@ public class Log {
         this.feedback = feedback;
     }
 
-    public int getLid() {
+    public String getLid() {
         return lid;
     }
 
-    public int getTable_id() {
+    public String getTable_id() {
         return table_id;
     }
 
     public void setTable_id(int table_id) {
-        this.table_id = table_id;
+        this.table_id = String.valueOf(table_id);
     }
 
-    public LogType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(LogType type) {
+    public void setType(String type) {
         this.type = type;
     }
 
-    public int getCid() {
+    public String getCid() {
         return cid;
     }
 
-    public void setCid(int cid) {
+    public void setCid(String cid) {
         this.cid = cid;
     }
 

@@ -73,6 +73,9 @@ public class LoginActivity extends AppCompatActivity
         Button signUpButton = (Button)findViewById(R.id.signupButton);
         TextView pswRec=(TextView)findViewById(R.id.pswRec);
 
+        InformationResources info = new InformationResources();
+        info.ReadUploadLog(getApplicationContext());
+        info.ReadUploadSleepLog(getApplicationContext());
 
 
 //        //init the views

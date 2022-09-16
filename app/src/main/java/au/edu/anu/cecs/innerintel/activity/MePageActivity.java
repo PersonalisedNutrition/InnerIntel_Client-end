@@ -24,7 +24,6 @@ import au.edu.anu.cecs.innerintel.activity.MessageActivity;
 public class MePageActivity extends AppCompatActivity {
     private boolean testMode = true;
 
-
     Button meSteButton, meEditButton;
     ListView listView;
     ArrayList<String> meInfo = new ArrayList<>();
@@ -32,10 +31,6 @@ public class MePageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_page);
-
-        InformationResources info = new InformationResources();
-        info.ReadUploadLog(getApplicationContext());
-        info.ReadUploadSleepLog(getApplicationContext());
 
         addInfo();
         listView = findViewById(R.id.meListview);

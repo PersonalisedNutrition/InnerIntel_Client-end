@@ -1,10 +1,7 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import au.edu.anu.cecs.innerintel.Bean.enumType.Location;
 import au.edu.anu.cecs.innerintel.Bean.enumType.MealType;
@@ -18,11 +15,11 @@ public class Daily_intake_log {
     private int lid; // can never edit, once create || this will relate with log by logId
     private Date date;
     private Time time;
-    private MealFood foodItems;
+    private LinkedList<MealFood> foodItems;
     private Location location;
     private String foodPhotos;
 
-    public Daily_intake_log(int lid, Date date, Time time, MealFood foodItems, Location location, String foodPhotos) {
+    public Daily_intake_log(int lid, Date date, Time time, LinkedList<MealFood> foodItems, Location location, String foodPhotos) {
         this.lid = lid;
         this.date = date;
         this.time = time;
@@ -55,11 +52,11 @@ public class Daily_intake_log {
         this.time = time;
     }
 
-    public MealFood getFoodItems() {
+    public LinkedList<MealFood> getFoodItems() {
         return foodItems;
     }
 
-    public void setFoodItems(MealFood foodItems) {
+    public void setFoodItems(LinkedList<MealFood> foodItems) {
         this.foodItems = foodItems;
     }
 

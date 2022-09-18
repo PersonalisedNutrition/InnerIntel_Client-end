@@ -4,6 +4,7 @@ import au.edu.anu.cecs.innerintel.Bean.enumType.CookingMethod;
 import au.edu.anu.cecs.innerintel.Bean.enumType.Unit;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * Food contains in a meal
@@ -13,7 +14,7 @@ import java.util.HashMap;
 public class MealFood {
     private int MealFood_id;
 
-    private Food food;
+    private LinkedList<Food> foods;
 
     private int portion_size;
 
@@ -26,9 +27,9 @@ public class MealFood {
     private String Cooking_fats_added;
 
 
-    public MealFood(int mealFood_id, Food food, int portion_size, Unit unit, String drink_size, CookingMethod cookingMethod, String cooking_fats_added) {
+    public MealFood(int mealFood_id, LinkedList<Food> foods, int portion_size, Unit unit, String drink_size, CookingMethod cookingMethod, String cooking_fats_added) {
         MealFood_id = mealFood_id;
-        this.food = food;
+        this.foods = foods;
         this.portion_size = portion_size;
         this.unit = unit;
         this.drink_size = drink_size;
@@ -44,12 +45,12 @@ public class MealFood {
         MealFood_id = mealFood_id;
     }
 
-    public Food getFood() {
-        return food;
+    public LinkedList<Food> getFoods() {
+        return foods;
     }
 
-    public void setFood(Food food) {
-        this.food = food;
+    public void setFoods(LinkedList<Food> foods) {
+        this.foods = foods;
     }
 
     public int getPortion_size() {

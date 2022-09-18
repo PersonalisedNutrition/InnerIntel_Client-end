@@ -4,12 +4,9 @@ package au.edu.anu.cecs.innerintel.Bean.enumType;
  * @author XinyueHu
  */
 public enum CookingMethod {
-    PAN_FRIED,
+    RAW,
     BOILED,
-    STEAMED,
     FRIED,
-    STIR_FRIED,
     GRILLED,
-    ROAST,
     BAKED
 }

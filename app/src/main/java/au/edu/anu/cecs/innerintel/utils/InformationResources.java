@@ -63,57 +63,57 @@ public class InformationResources {
         /**
          * Read instances from logs.json and then upload to Firebase
          */
-        public void ReadUploadLog (Context context){
+//        public void ReadUploadLog (Context context){
+//
+//            try{
+//                JsonReader reader = new JsonReader(new InputStreamReader(
+//                        context.getResources().getAssets().open("logs.json")));
+//                Gson gson = new GsonBuilder().create();
+//
+//                reader.beginArray();
+//                while (reader.hasNext()) {
+//                    //Read data into object model
+//                    Log log = gson.fromJson(String.valueOf(reader), Log.class);
+//                    this.logs.add(log);
+//                    db.collection("Log").document(log.getLid()).set(log);
+//                }
+//                reader.close();
+//            } catch (UnsupportedEncodingException e) {
+//                System.out.println("The encoding is unsupported!");
+//            } catch (FileNotFoundException e) {
+//                System.out.println("Cannot find logs.json!");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//
+//        }
 
-            try{
-                JsonReader reader = new JsonReader(new InputStreamReader(
-                        context.getResources().getAssets().open("logs.json")));
-                Gson gson = new GsonBuilder().create();
-
-                reader.beginArray();
-                while (reader.hasNext()) {
-                    //Read data into object model
-                    Log log = gson.fromJson(String.valueOf(reader), Log.class);
-                    this.logs.add(log);
-                    db.collection("Log").document(log.getLid()).set(log);
-                }
-                reader.close();
-            } catch (UnsupportedEncodingException e) {
-                System.out.println("The encoding is unsupported!");
-            } catch (FileNotFoundException e) {
-                System.out.println("Cannot find logs.json!");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-
-        }
-
-    public void ReadUploadSleepLog (Context context){
-
-        try{
-            JsonReader reader = new JsonReader(new InputStreamReader(
-                    context.getResources().getAssets().open("sleep_log.json")));
-            Gson gson = new GsonBuilder().create();
-
-            reader.beginArray();
-            while (reader.hasNext()) {
-                //Read data into object model
-                SleepLog sleepLog = gson.fromJson(String.valueOf(reader), SleepLog.class);
-                this.sleepLogs.add(sleepLog);
-                db.collection("SleepLog").document(sleepLog.getSleep_id()).set(sleepLog);
-            }
-            reader.close();
-        } catch (UnsupportedEncodingException e) {
-            System.out.println("The encoding is unsupported!");
-        } catch (FileNotFoundException e) {
-            System.out.println("Cannot find sleep_log.json!");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
+//    public void ReadUploadSleepLog (Context context){
+//
+//        try{
+//            JsonReader reader = new JsonReader(new InputStreamReader(
+//                    context.getResources().getAssets().open("sleep_log.json")));
+//            Gson gson = new GsonBuilder().create();
+//
+//            reader.beginArray();
+//            while (reader.hasNext()) {
+//                //Read data into object model
+//                SleepLog sleepLog = gson.fromJson(String.valueOf(reader), SleepLog.class);
+//                this.sleepLogs.add(sleepLog);
+//                db.collection("SleepLog").document(sleepLog.getSleep_id()).set(sleepLog);
+//            }
+//            reader.close();
+//        } catch (UnsupportedEncodingException e) {
+//            System.out.println("The encoding is unsupported!");
+//        } catch (FileNotFoundException e) {
+//            System.out.println("Cannot find sleep_log.json!");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
 
 
 

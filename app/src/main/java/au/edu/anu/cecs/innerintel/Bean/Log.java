@@ -1,57 +1,50 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
+import java.sql.Date;
+import java.sql.Time;
+
 /**
  * two constructors : difference(contains logtime and logauthority or without them)
  * logId cannot be edit once create
- * @author Tianqi Tang
+ * @author Tianqi Tang,Xinyue Hu,Hengtong Wu
  */
 public class Log {
-    private String lid; // can never edit, once create
-    private String table_id;
+    private int lid; // can never edit, once create
+    private int table_id;
     private String type;
-    private String cid;
-    private String time;
+    private int cid;
+
+    private Date date;
+    private Time time;
+
+    private boolean flag;
     private String feedback;
-//    private int logAuthority;
 
-//    public Log(int logId, int userID, LogType logType, String logTime, int logAuthority) {
-//        this.logId = logId;
-//        this.cid = userID;
-//        this.logType = logType;
-//        this.logTime = logTime;
-//        this.logAuthority = logAuthority;
-//    }
-
-
-
-
-    //    public Log(int logId, int userID, LogType logType) {
-//        this.logId = logId;
-//        this.userID = userID;
-//        this.logType = logType;
-//        this.logTime = null;
-//        this.logAuthority = 1;
-//    }
-
-    public Log(String lid, String table_id, String type, String cid, String time, String feedback) {
+    public Log(int lid, int table_id, String type, int cid, Date date, Time time, boolean flag, String feedback) {
         this.lid = lid;
         this.table_id = table_id;
         this.type = type;
         this.cid = cid;
+        this.date = date;
         this.time = time;
+        this.flag = flag;
         this.feedback = feedback;
     }
 
-    public String getLid() {
+    public int getLid() {
         return lid;
     }
 
-    public String getTable_id() {
+    public void setLid(int lid) {
+        this.lid = lid;
+    }
+
+    public int getTable_id() {
         return table_id;
     }
 
     public void setTable_id(int table_id) {
-        this.table_id = String.valueOf(table_id);
+        this.table_id = table_id;
     }
 
     public String getType() {
@@ -62,20 +55,36 @@ public class Log {
         this.type = type;
     }
 
-    public String getCid() {
+    public int getCid() {
         return cid;
     }
 
-    public void setCid(String cid) {
+    public void setCid(int cid) {
         this.cid = cid;
     }
 
-    public String getTime() {
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Time getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Time time) {
         this.time = time;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 
     public String getFeedback() {
@@ -85,40 +94,4 @@ public class Log {
     public void setFeedback(String feedback) {
         this.feedback = feedback;
     }
-
-    //    public void setLogType(LogType logType) {
-//        this.logType = logType;
-//    }
-//
-//    public void setLogTime(String logTime) {
-//        this.logTime = logTime;
-//    }
-//
-//    public void setUserID(int userID) {
-//        this.userID = userID;
-//    }
-//
-//    public int getUserID() {
-//        return userID;
-//    }
-//
-//    public void setLogAuthority(int logAuthority) {
-//        this.logAuthority = logAuthority;
-//    }
-//
-//    public int getLogId() {
-//        return logId;
-//    }
-//
-//    public LogType getLogType() {
-//        return logType;
-//    }
-//
-//    public String getLogTime() {
-//        return logTime;
-//    }
-//
-//    public int getLogAuthority() {
-//        return logAuthority;
-//    }
 }

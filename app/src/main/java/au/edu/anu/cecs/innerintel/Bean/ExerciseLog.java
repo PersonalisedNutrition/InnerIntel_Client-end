@@ -1,44 +1,75 @@
 package au.edu.anu.cecs.innerintel.Bean;
 
+import java.sql.Date;
+import java.sql.Time;
+
 import au.edu.anu.cecs.innerintel.Bean.enumType.ExerciseType;
 /**
  * when create a Exercise log, also should create a log
  * @author Tianqi Tang
  */
 public class ExerciseLog {
-    private final int logId; // can never edit, once create || this will relate with log by logId
-    private ExerciseType exerciseType;
-    private String exerciseDescription;
+    private int exercise_id;
+    private int lid;
+    private String exerciseType;
+    private Date date;
+    private Time time;
+    private int duration;
 
-    public ExerciseLog(int logId, ExerciseType exerciseType) {
-        this.logId = logId;
+    public ExerciseLog(int exercise_id, int lid, String exerciseType, Date date, Time time, int duration) {
+        this.exercise_id = exercise_id;
+        this.lid = lid;
         this.exerciseType = exerciseType;
-        this.exerciseDescription = null;
+        this.date = date;
+        this.time = time;
+        this.duration = duration;
     }
 
-    public ExerciseLog(int logId, ExerciseType exerciseType, String exerciseDescription) {
-        this.logId = logId;
-        this.exerciseType = exerciseType;
-        this.exerciseDescription = exerciseDescription;
+    public int getExercise_id() {
+        return exercise_id;
     }
 
-    public void setExerciseType(ExerciseType exerciseType) {
-        this.exerciseType = exerciseType;
+    public void setExercise_id(int exercise_id) {
+        this.exercise_id = exercise_id;
     }
 
-    public void setExerciseDescription(String exerciseDescription) {
-        this.exerciseDescription = exerciseDescription;
+    public int getLid() {
+        return lid;
     }
 
-    public int getLogId() {
-        return logId;
+    public void setLid(int lid) {
+        this.lid = lid;
     }
 
-    public ExerciseType getExerciseType() {
+    public String getExerciseType() {
         return exerciseType;
     }
 
-    public String getExerciseDescription() {
-        return exerciseDescription;
+    public void setExerciseType(String exerciseType) {
+        this.exerciseType = exerciseType;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }

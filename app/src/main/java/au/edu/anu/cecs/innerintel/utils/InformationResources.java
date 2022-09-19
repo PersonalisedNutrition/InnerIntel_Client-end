@@ -60,7 +60,8 @@ public class InformationResources {
         }
     }
 
-        /**
+
+    /**
          * Read instances from logs.json and then upload to Firebase
          */
 //        public void ReadUploadLog (Context context){
